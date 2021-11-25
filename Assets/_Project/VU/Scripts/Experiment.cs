@@ -10,25 +10,8 @@ namespace VU.Scripts
         public string ParticipantName = "DefaultName";
         public Foot Foot;
         public float Memory = 2f;
-        
-        KickStartEvent _currentKickStart;
-        KickEndEvent _currentKickEnd;
 
-        public Queue<Vector3> FootMovement = new();
-
-        void FixedUpdate()
-        {
-            var secondsOfStoredPositions = FootMovement.Count / Time.fixedDeltaTime;
-            if (secondsOfStoredPositions < Memory)
-                FootMovement.Enqueue(Foot.transform.position);
-            else
-            {
-                FootMovement.Dequeue();
-                FootMovement.Enqueue(Foot.transform.position);
-            }
-        }
-
-        public void OnOnKick(KickStartEvent kickStart)
+        public void OnKicked(KickStartEvent kickStart)
         {
             _currentKickStart = kickStart;
         }
@@ -40,7 +23,7 @@ namespace VU.Scripts
             print("Kick ended");
         }
 
-        public void SaveTrialData()
+        public Trial SaveTrialData()
         {
             var trial = new Trial()
             {
@@ -52,10 +35,31 @@ namespace VU.Scripts
                 },
                 Tracking = new TrackingData()
                 {
-                    Foot = FootMovement.ToList()
+                    Foot = _footMovement.Select<Vector3, Point3D>(x => x).ToList()
                 }
             };
+
+            return trial;
         }
+
+        void FixedUpdate()
+        {
+            var secondsOfStoredPositions = _footMovement.Count / Time.fixedDeltaTime;
+            if (secondsOfStoredPositions < Memory)
+            {
+                _footMovement.Enqueue(Foot.transform.position);
+            }
+            else
+            {
+                _footMovement.Dequeue();
+                _footMovement.Enqueue(Foot.transform.position);
+            }
+        }
+
+        readonly Queue<Vector3> _footMovement = new();
+
+        KickStartEvent _currentKickStart;
+        KickEndEvent _currentKickEnd;
     }
 
     [Serializable]
@@ -69,7 +73,7 @@ namespace VU.Scripts
     [Serializable]
     public class TrackingData
     {
-        public List<Vector3> Foot;
+        public List<Point3D> Foot;
     }
 
     [Serializable]

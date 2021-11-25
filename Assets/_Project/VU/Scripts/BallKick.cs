@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace VU.Scripts
 {
     public class BallKick : MonoBehaviour
     {
-        bool _isCoolDown;
-        
+        public event Action<KickStartEvent> OnKick;
+        public event Action OnTrialEnd;
+
         void OnTriggerEnter(Collider other)
         {
             if (_isCoolDown) return;
-            
+
             if (IsA<FootModel>(other.gameObject))
             {
                 _footIsKickingBall = true;
@@ -31,7 +31,7 @@ namespace VU.Scripts
                 _isCoolDown = true;
                 StartCoroutine(ExitCooldown(1f));
             }
-            
+
             _footIsKickingBall = false;
         }
 
@@ -56,19 +56,19 @@ namespace VU.Scripts
 
             var kickTime = Time.time - _startTime;
             var velocityMeterPerSecond = kickDirection / kickTime;
-            var velocity =velocityMeterPerSecond;
+            var velocity = velocityMeterPerSecond;
             rb.velocity = velocity * 4f;
 
 
             var kickData = new KickStartEvent()
             {
                 Origin = _startPosition,
-                VelocityVector = kickDirection,
+                VelocityVector = kickDirection
             };
 
 
             OnKick?.Invoke(kickData);
-            StartCoroutine(Delay(3f, OnNextTrialStart));
+            StartCoroutine(Delay(3f, OnTrialEnd));
         }
 
 
@@ -78,13 +78,13 @@ namespace VU.Scripts
             callback();
         }
 
+        bool _isCoolDown;
+
         Vector3 _endPosition;
         bool _isKickInProgress;
         Vector3 _startPosition;
         float _startTime;
         bool _footIsKickingBall;
-        public event Action<KickStartEvent> OnKick;
-        public event Action OnNextTrialStart;
     }
 
     [Serializable]
@@ -97,18 +97,16 @@ namespace VU.Scripts
     [Serializable]
     public class Point3D
     {
-        float X;
-        float Y;
-        float Z;
-        
-        public static implicit operator Point3D(Vector3 input)
-        {
-            return new Point3D()
+        public static implicit operator Point3D(Vector3 input) =>
+            new()
             {
                 X = input.x,
                 Y = input.y,
                 Z = input.z
             };
-        }
+
+        float X;
+        float Y;
+        float Z;
     }
 }
