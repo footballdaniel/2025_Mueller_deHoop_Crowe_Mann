@@ -4,12 +4,9 @@ namespace VU.Scripts
 {
     public class Foot : MonoBehaviour
     {
-        [SerializeField] Transform _footRoot;
-
-
-        void Update()
+        public void AttachTo(Transform rootObject)
         {
-            transform.SetPositionAndRotation(_footRoot.position, _footRoot.rotation);
+            transform.SetParent(rootObject);
         }
     }
 }
