@@ -1,8 +1,6 @@
 using UnityEngine;
 
 namespace VU.Scripts
-
-
 {
     public class UserVR : User
     {
@@ -13,6 +11,7 @@ namespace VU.Scripts
         public override GazeInformation Gaze => _gazeInformation;
         public override HeadInformation Head => _headInformation;
         public override Transform FootRootElement => _footRoot;
+
         public override void Visit(Foot foot)
         {
             foot.AttachTo(_footRoot);

@@ -13,13 +13,12 @@ namespace VU.Scripts
         public GameObject ExperimentPrefab;
 
         [Header("Dependencies")] public Foot Foot;
-        public Experiment _experiment;
         public TargetArea _goal;
         public TargetArea _missedTarget;
 
         void Awake()
         {
-            _userGO = Instantiate(UserPrefab, transform);
+            _userGO = Instantiate(UserPrefab);
             var user = _userGO.GetComponent<User>();
             user.Visit(Foot);
         }
@@ -75,6 +74,7 @@ namespace VU.Scripts
             _ball.OnKick += _goalkeeper.OnKicked;
         }
 
+        Experiment _experiment;
         GameObject _userGO;
         GameObject _ballGO;
         BallKick _ball;
