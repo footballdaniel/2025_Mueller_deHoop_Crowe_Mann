@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System.Collections;
 
 namespace VU.Scripts
 {
@@ -14,6 +15,7 @@ namespace VU.Scripts
         public void OnKicked(KickStartEvent kickStart)
         {
             _currentKickStart = kickStart;
+            _footTrajectoryAtKick = new Queue<Vector3>(_footMovementBuffer);
         }
 
         public void OnKickEnded(KickEndEvent kickEnd)
@@ -36,7 +38,7 @@ namespace VU.Scripts
                 },
                 Tracking = new TrackingData()
                 {
-                    Foot = _footMovement.Select<Vector3, Point3D>(x => x).ToList()
+                    Foot = _footTrajectoryAtKick.Select<Vector3, Point3D>(x => x).ToList()
                 }
             };
 
@@ -45,19 +47,20 @@ namespace VU.Scripts
 
         void FixedUpdate()
         {
-            var secondsOfStoredPositions = _footMovement.Count * Time.fixedDeltaTime;
+            var secondsOfStoredPositions = _footMovementBuffer.Count * Time.fixedDeltaTime;
             if (secondsOfStoredPositions < Memory)
             {
-                _footMovement.Enqueue(Foot.transform.position);
+                _footMovementBuffer.Enqueue(Foot.transform.position);
             }
             else
             {
-                _footMovement.Dequeue();
-                _footMovement.Enqueue(Foot.transform.position);
+                _footMovementBuffer.Dequeue();
+                _footMovementBuffer.Enqueue(Foot.transform.position);
             }
         }
 
-        readonly Queue<Vector3> _footMovement = new();
+        readonly Queue<Vector3> _footMovementBuffer = new();
+        Queue<Vector3> _footTrajectoryAtKick;
         KickStartEvent _currentKickStart;
         KickEndEvent _currentKickEnd;
     }

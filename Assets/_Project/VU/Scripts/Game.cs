@@ -10,6 +10,7 @@ namespace VU.Scripts
         [Header("Prefabs")] public GameObject UserPrefab;
         public GameObject BallPrefab;
         public GameObject GoalkeeperPrefab;
+        public GameObject ExperimentPrefab;
 
         [Header("Dependencies")] public Foot Foot;
         public Experiment _experiment;
@@ -49,6 +50,7 @@ namespace VU.Scripts
 
             Destroy(_ballGO);
             Destroy(_goalkeeperGO);
+            Destroy(_experimentGO);
 
             SetupTrial();
         }
@@ -60,6 +62,9 @@ namespace VU.Scripts
 
             _goalkeeperGO = Instantiate(GoalkeeperPrefab);
             _goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
+
+            _experimentGO = Instantiate(ExperimentPrefab);
+            _experiment = _experimentGO.GetComponent<Experiment>();
 
             // Events
             _experiment.Foot = Foot;
@@ -75,5 +80,6 @@ namespace VU.Scripts
         BallKick _ball;
         GameObject _goalkeeperGO;
         Goalkeeper _goalkeeper;
+        GameObject _experimentGO;
     }
 }
