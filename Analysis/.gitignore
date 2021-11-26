@@ -1,10 +1,4 @@
-tracking/example_data/Sample*.*
-data/*.mp4
-data/*.csv
-data/*.png
-*.mp4
 .idea/
-results/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
