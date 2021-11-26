@@ -28,6 +28,7 @@ namespace VU.Scripts
             var trial = new Trial()
             {
                 ParticipantName = ParticipantName,
+                DateTime = DateTime.Now.ToString("yyyy_M_dd_HH_mm_ss"),
                 Events = new EventData()
                 {
                     End = _currentKickEnd,
@@ -44,7 +45,7 @@ namespace VU.Scripts
 
         void FixedUpdate()
         {
-            var secondsOfStoredPositions = _footMovement.Count / Time.fixedDeltaTime;
+            var secondsOfStoredPositions = _footMovement.Count * Time.fixedDeltaTime;
             if (secondsOfStoredPositions < Memory)
             {
                 _footMovement.Enqueue(Foot.transform.position);
@@ -57,7 +58,6 @@ namespace VU.Scripts
         }
 
         readonly Queue<Vector3> _footMovement = new();
-
         KickStartEvent _currentKickStart;
         KickEndEvent _currentKickEnd;
     }
@@ -66,6 +66,7 @@ namespace VU.Scripts
     public class Trial
     {
         public string ParticipantName;
+        public string DateTime;
         public EventData Events;
         public TrackingData Tracking;
     }

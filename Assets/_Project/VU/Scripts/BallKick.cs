@@ -105,8 +105,8 @@ namespace VU.Scripts
                 Z = input.z
             };
 
-        float X;
-        float Y;
-        float Z;
+        public float X;
+        public float Y;
+        public float Z;
     }
 }
