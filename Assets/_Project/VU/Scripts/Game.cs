@@ -7,8 +7,9 @@ namespace VU.Scripts
 {
     public class Game : MonoBehaviour
     {
-        [Header("Prefabs")] public GameObject ViewPrefab;
+        [Header("Prefabs")] public GameObject UserPrefab;
         public GameObject BallPrefab;
+        public GameObject GoalkeeperPrefab;
 
         [Header("Dependencies")] public Foot Foot;
         public Experiment _experiment;
@@ -17,22 +18,14 @@ namespace VU.Scripts
 
         void Awake()
         {
-            _viewGO = Instantiate(ViewPrefab, transform);
-            var view = _viewGO.GetComponent<User>();
-            view.Visit(Foot);
+            _userGO = Instantiate(UserPrefab, transform);
+            var user = _userGO.GetComponent<User>();
+            user.Visit(Foot);
         }
 
         void Start()
         {
-            _ballGO = Instantiate(BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
-            _ball = _ballGO.GetComponent<BallKick>();
-
-            // Events
-            _experiment.Foot = Foot;
-            _ball.OnKick += _experiment.OnKicked;
-            _goal.OnKick += _experiment.OnKickEnded;
-            _missedTarget.OnKick += _experiment.OnKickEnded;
-            _ball.OnTrialEnd += OnTrialEnded;
+            SetupTrial();
         }
 
         void OnTrialEnded()
@@ -44,7 +37,7 @@ namespace VU.Scripts
             var dateTime = DateTime.Now.ToString("yyyy_M_dd_HH_mm_ss");
             var filePath = Path.Combine(folderPath, $"Trial_{dateTime}.json");
             File.WriteAllText(filePath, json);
-            
+
             Debug.Log($"Data saved to: {folderPath}");
 
             // Events
@@ -52,22 +45,35 @@ namespace VU.Scripts
             _goal.OnKick -= _experiment.OnKickEnded;
             _missedTarget.OnKick -= _experiment.OnKickEnded;
             _ball.OnTrialEnd -= OnTrialEnded;
+            _ball.OnKick -= _goalkeeper.OnKicked;
+
             Destroy(_ballGO);
+            Destroy(_goalkeeperGO);
 
+            SetupTrial();
+        }
 
+        void SetupTrial()
+        {
             _ballGO = Instantiate(BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
-            var ball = _ballGO.GetComponent<BallKick>();
+            _ball = _ballGO.GetComponent<BallKick>();
+
+            _goalkeeperGO = Instantiate(GoalkeeperPrefab);
+            _goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
 
             // Events
             _experiment.Foot = Foot;
-            ball.OnKick += _experiment.OnKicked;
+            _ball.OnKick += _experiment.OnKicked;
             _goal.OnKick += _experiment.OnKickEnded;
             _missedTarget.OnKick += _experiment.OnKickEnded;
-            ball.OnTrialEnd += OnTrialEnded;
+            _ball.OnTrialEnd += OnTrialEnded;
+            _ball.OnKick += _goalkeeper.OnKicked;
         }
 
-        GameObject _viewGO;
+        GameObject _userGO;
         GameObject _ballGO;
         BallKick _ball;
+        GameObject _goalkeeperGO;
+        Goalkeeper _goalkeeper;
     }
 }

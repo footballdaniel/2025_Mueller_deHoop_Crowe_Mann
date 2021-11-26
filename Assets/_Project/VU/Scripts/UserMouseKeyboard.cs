@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace VU.Scripts
@@ -16,6 +15,8 @@ namespace VU.Scripts
         public override void Visit(Foot foot)
         {
             _foot = foot;
+            // Add some random rotation around X axis
+            _foot.transform.Rotate(90, 0f, 0f);
             _animator = foot.gameObject.AddComponent<Animator>();
             _animator.runtimeAnimatorController = _fakeKick;
         }

@@ -518,8 +518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7e49fd6df7ffc4788580e1d690824b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ViewPrefab: {fileID: 5217741134839186891, guid: b9292711713f886459671d02b9721d94, type: 3}
+  UserPrefab: {fileID: 5217741134839186891, guid: b9292711713f886459671d02b9721d94, type: 3}
   BallPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
+  GoalkeeperPrefab: {fileID: 5462292101878927168, guid: 55b88a8836c59824eb9ae3b87374f3a3, type: 3}
   Foot: {fileID: 1014930250}
   _experiment: {fileID: 1937649468}
   _goal: {fileID: 782919181}
@@ -1905,10 +1906,10 @@ RectTransform:
   m_Father: {fileID: 691709720}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 1}
-  m_AnchorMax: {x: 0.9, y: 1}
-  m_AnchoredPosition: {x: 7.2459106, y: -3.1013145}
-  m_SizeDelta: {x: 85.824005, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 4.0200195, y: 10.095001}
+  m_SizeDelta: {x: -8.040021, y: 20.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1666816141
 MonoBehaviour:

@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 808397390139846708}
   - component: {fileID: -8092036112614541693}
   m_Layer: 0
-  m_Name: Mouse Keyboard View
+  m_Name: User Mouse Keyboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
