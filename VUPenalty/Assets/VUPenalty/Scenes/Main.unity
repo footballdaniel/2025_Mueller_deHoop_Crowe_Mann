@@ -781,7 +781,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -889,6 +889,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1848119217}
     m_Modifications:
     - target: {fileID: 100300, guid: 326f6ba982043af4496f866fee104536, type: 3}
@@ -952,6 +953,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 326f6ba982043af4496f866fee104536, type: 3}
 --- !u!4 &688695475 stripped
 Transform:
@@ -2363,6 +2365,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1040984989}
     m_Modifications:
     - target: {fileID: 5215730761130298718, guid: 071e21f0ba42fdd46acc0304f21c4f3b, type: 3}
@@ -2414,4 +2417,5 @@ PrefabInstance:
       value: Foot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 071e21f0ba42fdd46acc0304f21c4f3b, type: 3}

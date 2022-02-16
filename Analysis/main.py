@@ -9,7 +9,7 @@ st.title("Penalty environment")
 select_axis = st.selectbox('Foot movement', ('X', 'Y', 'Z'))
 
 fig, ax = plt.subplots()
-for filename in glob.glob('C:/Users/danie/AppData/LocalLow/DefaultCompany/VUPenalty/Trial*.json'):
+for filename in glob.glob('C:/Users/danie/AppData/LocalLow/VROOM/VUPenalty/Trial*.json'):
     filecontent = open(filename)
     content = jsonpickle.decode(filecontent.read())
     filecontent.close()
