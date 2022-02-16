@@ -10,7 +10,7 @@ namespace VU.Scripts
     {
         public string ParticipantName = "DefaultName";
         public Foot Foot;
-        public float Memory = 2f;
+        public float DurationOfDataToSave = 2f;
 
         public void OnKicked(KickStartEvent kickStart)
         {
@@ -48,7 +48,7 @@ namespace VU.Scripts
         void FixedUpdate()
         {
             var secondsOfStoredPositions = _footMovementBuffer.Count * Time.fixedDeltaTime;
-            if (secondsOfStoredPositions < Memory)
+            if (secondsOfStoredPositions < DurationOfDataToSave)
             {
                 _footMovementBuffer.Enqueue(Foot.transform.position);
             }

@@ -7,7 +7,10 @@ namespace VU.Scripts
 {
     public class Game : MonoBehaviour
     {
-        [Header("Prefabs")] public GameObject UserPrefab;
+        [Header("User display mode")] 
+        public GameObject UserPrefab;
+
+        [Header("Prefabs")]
         public GameObject BallPrefab;
         public GameObject GoalkeeperPrefab;
         public GameObject ExperimentPrefab;
