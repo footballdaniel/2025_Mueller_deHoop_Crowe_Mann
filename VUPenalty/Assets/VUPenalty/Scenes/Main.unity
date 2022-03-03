@@ -499,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 526537781}
   - component: {fileID: 526537780}
+  - component: {fileID: 526537782}
   m_Layer: 0
   m_Name: '[Scripts]'
   m_TagString: Untagged
@@ -521,7 +522,7 @@ MonoBehaviour:
   UserPrefab: {fileID: 3082566005953751452, guid: 3c5060e04175c604484ae9fd4c376045, type: 3}
   BallPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
   GoalkeeperPrefab: {fileID: 5462292101878927168, guid: 55b88a8836c59824eb9ae3b87374f3a3, type: 3}
-  ExperimentPrefab: {fileID: 7000969385875616103, guid: 7ad9e549ba33e664c9d150a6bd599dcc, type: 3}
+  _experiment: {fileID: 526537782}
   Foot: {fileID: 1014930250}
   _goal: {fileID: 782919181}
   _missedTarget: {fileID: 933318483}
@@ -540,6 +541,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526537782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526537779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcac2fe3a4454702bca34efb008dc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParticipantName: DefaultName
+  Foot: {fileID: 0}
+  DurationOfDataToSave: 2
 --- !u!1 &621400555
 GameObject:
   m_ObjectHideFlags: 0

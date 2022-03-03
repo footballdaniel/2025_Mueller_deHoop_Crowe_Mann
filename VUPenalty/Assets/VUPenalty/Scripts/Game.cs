@@ -13,9 +13,10 @@ namespace VU.Scripts
         [Header("Prefabs")]
         public GameObject BallPrefab;
         public GameObject GoalkeeperPrefab;
-        public GameObject ExperimentPrefab;
 
-        [Header("Dependencies")] public Foot Foot;
+        [Header("Dependencies")]
+        [SerializeField] Experiment _experiment;
+        public Foot Foot;
         public TargetArea _goal;
         public TargetArea _missedTarget;
 
@@ -29,6 +30,23 @@ namespace VU.Scripts
         void Start()
         {
             SetupTrial();
+        }
+
+        void SetupTrial()
+        {
+            _ballGO = Instantiate(BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
+            _ball = _ballGO.GetComponent<BallKick>();
+
+            _goalkeeperGO = Instantiate(GoalkeeperPrefab);
+            _goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
+
+            // Events
+            _experiment.Foot = Foot;
+            _ball.OnKick += _experiment.OnKicked;
+            _goal.OnKick += _experiment.OnKickEnded;
+            _missedTarget.OnKick += _experiment.OnKickEnded;
+            _ball.OnTrialEnd += OnTrialEnded;
+            _ball.OnKick += _goalkeeper.OnKicked;
         }
 
         void OnTrialEnded()
@@ -56,28 +74,7 @@ namespace VU.Scripts
 
             SetupTrial();
         }
-
-        void SetupTrial()
-        {
-            _ballGO = Instantiate(BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
-            _ball = _ballGO.GetComponent<BallKick>();
-
-            _goalkeeperGO = Instantiate(GoalkeeperPrefab);
-            _goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
-
-            _experimentGO = Instantiate(ExperimentPrefab);
-            _experiment = _experimentGO.GetComponent<Experiment>();
-
-            // Events
-            _experiment.Foot = Foot;
-            _ball.OnKick += _experiment.OnKicked;
-            _goal.OnKick += _experiment.OnKickEnded;
-            _missedTarget.OnKick += _experiment.OnKickEnded;
-            _ball.OnTrialEnd += OnTrialEnded;
-            _ball.OnKick += _goalkeeper.OnKicked;
-        }
-
-        Experiment _experiment;
+        
         GameObject _userGO;
         GameObject _ballGO;
         BallKick _ball;
