@@ -519,9 +519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7e49fd6df7ffc4788580e1d690824b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UserPrefab: {fileID: 3082566005953751452, guid: 3c5060e04175c604484ae9fd4c376045, type: 3}
-  BallPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
-  GoalkeeperPrefab: {fileID: 5462292101878927168, guid: 55b88a8836c59824eb9ae3b87374f3a3, type: 3}
+  _userPrefab: {fileID: 3082566005953751452, guid: 3c5060e04175c604484ae9fd4c376045, type: 3}
+  _ballPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
+  _goalkeeperPrefab: {fileID: 3082566005953751452, guid: 3c5060e04175c604484ae9fd4c376045, type: 3}
   _experiment: {fileID: 526537782}
   Foot: {fileID: 1014930250}
   _goal: {fileID: 782919181}
@@ -554,8 +554,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParticipantName: DefaultName
-  Foot: {fileID: 0}
   DurationOfDataToSave: 2
+  Foot: {fileID: 0}
 --- !u!1 &621400555
 GameObject:
   m_ObjectHideFlags: 0

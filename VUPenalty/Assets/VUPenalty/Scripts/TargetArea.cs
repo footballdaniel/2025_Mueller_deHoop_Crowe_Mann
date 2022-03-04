@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using VUPenalty;
 
 namespace VU.Scripts
 {
@@ -11,7 +12,7 @@ namespace VU.Scripts
         
         void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<BallKick>(out var ball))
+            if (other.TryGetComponent<Ball>(out var ball))
                 OnKick?.Invoke(new KickEndEvent()
                 {
                     EndLocation = ball.transform.position,

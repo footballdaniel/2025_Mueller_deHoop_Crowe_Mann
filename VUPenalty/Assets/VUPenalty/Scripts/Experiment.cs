@@ -2,14 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using VU.Scripts;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public class Experiment : MonoBehaviour
     {
         public string ParticipantName = "DefaultName";
-        public Foot Foot;
         public float DurationOfDataToSave = 2f;
+        [HideInInspector] public Foot Foot;
 
         public void OnKicked(KickStartEvent kickStart)
         {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using VUPenalty;
 
 namespace VU.Scripts
 {
@@ -12,7 +13,7 @@ namespace VU.Scripts
         public override HeadInformation Head { get; }
         public override Transform FootRootElement => transform;
 
-        public override void Visit(Foot foot)
+        public override void Use(Foot foot)
         {
             _foot = foot;
             // Add some random rotation around X axis

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1690524652}
   - component: {fileID: 1690524647}
   m_Layer: 0
-  m_Name: Soccer Ball
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

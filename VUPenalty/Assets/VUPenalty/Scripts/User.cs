@@ -1,6 +1,7 @@
 using UnityEngine;
+using VU.Scripts;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public abstract class User : MonoBehaviour
     {
@@ -8,6 +9,6 @@ namespace VU.Scripts
         public abstract HeadInformation Head { get; }
 
         public abstract Transform FootRootElement { get; }
-        public abstract void Visit(Foot foot);
+        public abstract void Use(Foot foot);
     }
 }

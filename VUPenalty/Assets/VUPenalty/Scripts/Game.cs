@@ -2,29 +2,30 @@ using System;
 using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
+using VU.Scripts;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public class Game : MonoBehaviour
     {
         [Header("User display mode")] 
-        public GameObject UserPrefab;
+        [SerializeField] public GameObject _userPrefab;
 
         [Header("Prefabs")]
-        public GameObject BallPrefab;
-        public GameObject GoalkeeperPrefab;
+        [SerializeField] GameObject _ballPrefab;
+        [SerializeField] GameObject _goalkeeperPrefab;
 
         [Header("Dependencies")]
         [SerializeField] Experiment _experiment;
-        public Foot Foot;
-        public TargetArea _goal;
-        public TargetArea _missedTarget;
+        [SerializeField] Foot _foot;
+        [SerializeField] TargetArea _goal;
+        [SerializeField] TargetArea _missedTarget;
 
         void Awake()
         {
-            _userGO = Instantiate(UserPrefab);
-            var user = _userGO.GetComponent<User>();
-            user.Visit(Foot);
+            var userGameObject = Instantiate(_userPrefab);
+            var user = userGameObject.GetComponent<User>();
+            user.Use(_foot);
         }
 
         void Start()
@@ -34,14 +35,14 @@ namespace VU.Scripts
 
         void SetupTrial()
         {
-            _ballGO = Instantiate(BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
-            _ball = _ballGO.GetComponent<BallKick>();
+            _ballGO = Instantiate(_ballPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
+            _ball = _ballGO.GetComponent<VU.Scripts.Ball>();
 
-            _goalkeeperGO = Instantiate(GoalkeeperPrefab);
+            _goalkeeperGO = Instantiate(_goalkeeperPrefab);
             _goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
 
             // Events
-            _experiment.Foot = Foot;
+            _experiment.Foot = _foot;
             _ball.OnKick += _experiment.OnKicked;
             _goal.OnKick += _experiment.OnKickEnded;
             _missedTarget.OnKick += _experiment.OnKickEnded;
@@ -53,7 +54,6 @@ namespace VU.Scripts
         {
             var data = _experiment.SaveTrialData();
             var json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            // var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             var folderPath = Application.persistentDataPath;
             var dateTime = DateTime.Now.ToString("yyyy_M_dd_HH_mm_ss");
             var filePath = Path.Combine(folderPath, $"Trial_{dateTime}.json");
@@ -77,7 +77,7 @@ namespace VU.Scripts
         
         GameObject _userGO;
         GameObject _ballGO;
-        BallKick _ball;
+        VU.Scripts.Ball _ball;
         GameObject _goalkeeperGO;
         Goalkeeper _goalkeeper;
         GameObject _experimentGO;

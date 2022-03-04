@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace VU.Scripts
 {
-    public class BallKick : MonoBehaviour
+    public class Ball : MonoBehaviour
     {
         public event Action<KickStartEvent> OnKick;
         public event Action OnTrialEnd;

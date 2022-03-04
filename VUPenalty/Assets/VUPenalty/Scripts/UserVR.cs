@@ -1,6 +1,7 @@
 using UnityEngine;
+using VU.Scripts;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public class UserVR : User
     {
@@ -12,7 +13,7 @@ namespace VU.Scripts
         public override HeadInformation Head => _headInformation;
         public override Transform FootRootElement => _footRoot;
 
-        public override void Visit(Foot foot)
+        public override void Use(Foot foot)
         {
             foot.AttachTo(_footRoot);
         }
