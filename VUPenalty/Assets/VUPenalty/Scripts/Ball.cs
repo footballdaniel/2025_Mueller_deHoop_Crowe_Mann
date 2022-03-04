@@ -7,7 +7,7 @@ namespace VUPenalty
     public class Ball : MonoBehaviour
     {
         public event Action<KickStartEvent> OnKick;
-        public event Action OnTrialEnd;
+
 
         void OnTriggerEnter(Collider other)
         {
@@ -65,21 +65,11 @@ namespace VUPenalty
                 Origin = _startPosition,
                 VelocityVector = kickDirection
             };
-
-
+            
             OnKick?.Invoke(kickData);
-            StartCoroutine(Delay(3f, OnTrialEnd));
         }
-
-
-        IEnumerator Delay(float f, Action callback)
-        {
-            yield return new WaitForSeconds(f);
-            callback();
-        }
-
+        
         bool _isCoolDown;
-
         Vector3 _endPosition;
         bool _isKickInProgress;
         Vector3 _startPosition;

@@ -24,8 +24,8 @@ namespace VUPenalty
         void Awake()
         {
             var userGameObject = Instantiate(_userPrefab);
-            var user = userGameObject.GetComponent<User>();
-            user.Use(_foot);
+            _user = userGameObject.GetComponent<User>();
+            _user.Use(_foot);
         }
 
         void Start()
@@ -37,6 +37,12 @@ namespace VUPenalty
         {
             if (!_experiment.IsTrialRunning)
                 GoToNextTrial();
+        }
+
+        [ContextMenu("Calibrate")]
+        private void CalibrateFoot()
+        {
+            _user.Calibrate(_foot);
         }
 
         [ContextMenu("Simulate Go to next trial")]
@@ -60,13 +66,14 @@ namespace VUPenalty
             _videoDisplay.Video = trial.Video;
             _videoDisplay.SetSize(trial.VideoWidth, trial.VideoHeight);
 
-            // Events
             _experiment.Foot = _foot;
+            
+            // Events
             _ball.OnKick += _experiment.OnKicked;
             _targetAreaSuccess.OnKick += _experiment.OnKickEnded;
             _targetAreaMissed.OnKick += _experiment.OnKickEnded;
-            _ball.OnTrialEnd += OnTrialEnded;
             _ball.OnKick += _goalkeeper.Dive;
+            _experiment.OnTrialEnd += OnTrialEnded;
             
             // Timing dependent variables
             _videoDisplay.Play();
@@ -87,7 +94,7 @@ namespace VUPenalty
             _ball.OnKick -= _experiment.OnKicked;
             _targetAreaSuccess.OnKick -= _experiment.OnKickEnded;
             _targetAreaMissed.OnKick -= _experiment.OnKickEnded;
-            _ball.OnTrialEnd -= OnTrialEnded;
+            _experiment.OnTrialEnd -= OnTrialEnded;
 
             Destroy(_ballGO);
             Destroy(_goalkeeperGO);
@@ -100,5 +107,6 @@ namespace VUPenalty
         GameObject _goalkeeperGO;
         Goalkeeper _goalkeeper;
         GameObject _experimentGO;
+        private User _user;
     }
 }

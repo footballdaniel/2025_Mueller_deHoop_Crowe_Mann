@@ -10,5 +10,11 @@ namespace VUPenalty
 
         public abstract Transform FootRootElement { get; }
         public abstract void Use(Foot foot);
+
+        public void Calibrate(Foot foot)
+        {
+            var offset = transform.rotation;
+            foot.transform.rotation *= Quaternion.Inverse(offset);
+        }
     }
 }

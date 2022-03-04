@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -16,11 +17,20 @@ namespace VUPenalty
         [HideInInspector] public Foot Foot;
 
         [HideInInspector] public bool IsTrialRunning;
+        
+        public event Action OnTrialEnd;
 
         public void OnKicked(KickStartEvent kickStart)
         {
             _currentKickStart = kickStart;
             _footTrajectoryAtKick = new Queue<Vector3>(_footMovementBuffer);
+            StartCoroutine(Delay(3f, OnTrialEnd));
+        }
+        
+        IEnumerator Delay(float duration, Action callback)
+        {
+            yield return new WaitForSeconds(duration);
+            callback();
         }
 
         public void OnKickEnded(KickEndEvent kickEnd)
