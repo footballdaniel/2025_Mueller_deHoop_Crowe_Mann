@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
-using VUPenalty;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public class TargetArea : MonoBehaviour
     {
@@ -12,7 +11,7 @@ namespace VU.Scripts
         
         void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<Ball>(out var ball))
+            if (other.TryGetComponent<VUPenalty.Ball>(out var ball))
                 OnKick?.Invoke(new KickEndEvent()
                 {
                     EndLocation = ball.transform.position,

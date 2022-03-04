@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
-using VU.Scripts;
 
 namespace VUPenalty
 {
@@ -18,8 +17,9 @@ namespace VUPenalty
         [Header("Dependencies")]
         [SerializeField] Experiment _experiment;
         [SerializeField] Foot _foot;
-        [SerializeField] TargetArea _goal;
-        [SerializeField] TargetArea _missedTarget;
+        [SerializeField] TargetArea _targetAreaSuccess;
+        [SerializeField] TargetArea _targetAreaMissed;
+        [SerializeField] private VideoDisplay _videoDisplay;
 
         void Awake()
         {
@@ -30,24 +30,46 @@ namespace VUPenalty
 
         void Start()
         {
-            SetupTrial();
+            GoToNextTrial();
         }
 
-        void SetupTrial()
+        private void Update()
+        {
+            if (!_experiment.IsTrialRunning)
+                GoToNextTrial();
+        }
+
+        [ContextMenu("Simulate Go to next trial")]
+        private void GoToNextTrial()
+        {
+            Debug.Log($"Start with next trial");
+            var trial = _experiment.MoveNext();
+            SetupTrial(trial);
+            _experiment.IsTrialRunning = true;
+        }
+
+        void SetupTrial(TrialInformation trial)
         {
             _ballGO = Instantiate(_ballPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
-            _ball = _ballGO.GetComponent<VU.Scripts.Ball>();
+            _ball = _ballGO.GetComponent<Ball>();
 
             _goalkeeperGO = Instantiate(_goalkeeperPrefab);
             _goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
+            _goalkeeper.JumpDirection = trial.JumpDirection;
+
+            _videoDisplay.Video = trial.Video;
+            _videoDisplay.SetSize(trial.VideoWidth, trial.VideoHeight);
 
             // Events
             _experiment.Foot = _foot;
             _ball.OnKick += _experiment.OnKicked;
-            _goal.OnKick += _experiment.OnKickEnded;
-            _missedTarget.OnKick += _experiment.OnKickEnded;
+            _targetAreaSuccess.OnKick += _experiment.OnKickEnded;
+            _targetAreaMissed.OnKick += _experiment.OnKickEnded;
             _ball.OnTrialEnd += OnTrialEnded;
-            _ball.OnKick += _goalkeeper.OnKicked;
+            _ball.OnKick += _goalkeeper.Dive;
+            
+            // Timing dependent variables
+            _videoDisplay.Play();
         }
 
         void OnTrialEnded()
@@ -63,21 +85,18 @@ namespace VUPenalty
 
             // Events
             _ball.OnKick -= _experiment.OnKicked;
-            _goal.OnKick -= _experiment.OnKickEnded;
-            _missedTarget.OnKick -= _experiment.OnKickEnded;
+            _targetAreaSuccess.OnKick -= _experiment.OnKickEnded;
+            _targetAreaMissed.OnKick -= _experiment.OnKickEnded;
             _ball.OnTrialEnd -= OnTrialEnded;
-            _ball.OnKick -= _goalkeeper.OnKicked;
 
             Destroy(_ballGO);
             Destroy(_goalkeeperGO);
             Destroy(_experimentGO);
-
-            SetupTrial();
         }
         
         GameObject _userGO;
         GameObject _ballGO;
-        VU.Scripts.Ball _ball;
+        Ball _ball;
         GameObject _goalkeeperGO;
         Goalkeeper _goalkeeper;
         GameObject _experimentGO;

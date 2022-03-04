@@ -1,17 +1,26 @@
 using UnityEngine;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public class Goalkeeper : MonoBehaviour
     {
+        public JumpDirection JumpDirection;
         [SerializeField] Animator _animator;
 
-        public void OnKicked(KickStartEvent obj)
+        public void Dive(KickStartEvent obj)
         {
-            if (obj.VelocityVector.X > 0)
-                _animator.SetTrigger("DiveLeft");
-            else
-                _animator.SetTrigger("DiveRight"); 
+            switch (JumpDirection)
+            {
+                case JumpDirection.Left:
+                    _animator.SetTrigger("DiveLeft");
+                    break;
+                case JumpDirection.Right:
+                    _animator.SetTrigger("DiveRight");
+                    break;
+                default:
+                    Debug.LogWarning($"Jump direction {JumpDirection} not implemented");
+                    break;
+            }
         }
     }
 }
