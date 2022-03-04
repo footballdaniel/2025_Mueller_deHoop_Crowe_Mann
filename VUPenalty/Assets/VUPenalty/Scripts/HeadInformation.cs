@@ -1,7 +1,9 @@
 using UnityEngine;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public class HeadInformation : MonoBehaviour
-    {}
+    {
+
+    }
 }

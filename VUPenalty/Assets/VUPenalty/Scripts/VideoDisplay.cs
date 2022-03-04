@@ -1,19 +1,38 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class VideoDisplay : MonoBehaviour
+namespace VUPenalty
 {
-
-    [HideInInspector] public VideoClip Video;
-    [SerializeField] VideoPlayer _videoPlayer;
-
-    public void SetSize(float width, float height)
+    [ExecuteInEditMode]
+    public class VideoDisplay : MonoBehaviour
     {
-        transform.localScale = new Vector3(width, height, 1f);
-    }
 
-    public void Play()
-    {
-        _videoPlayer.clip = Video;
+        public VideoClip Video;
+        [SerializeField] VideoPlayer _videoPlayer;
+
+        public void SetSize(float width, float height)
+        {
+            transform.localScale = new Vector3(width, height, 1f);
+        }
+
+        public void Play()
+        {
+            _videoPlayer.clip = Video;
+            _videoPlayer.Play();
+        }
+
+        public void PlayAfter(float seconds)
+        {
+            _videoPlayer.clip = Video;
+            StartCoroutine(Delay(seconds, _videoPlayer.Play));
+        }
+
+        IEnumerator Delay(float seconds, Action callback)
+        {
+            yield return new WaitForSeconds(seconds);
+            callback();
+        }
     }
 }

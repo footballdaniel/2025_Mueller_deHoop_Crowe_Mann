@@ -26,6 +26,9 @@ namespace VUPenalty
             var userGameObject = Instantiate(_userPrefab);
             _user = userGameObject.GetComponent<User>();
             _user.Use(_foot);
+
+            _timeToIntercept = new TimeToIntercept();
+
         }
 
         void Start()
@@ -35,8 +38,27 @@ namespace VUPenalty
 
         private void Update()
         {
-            if (!_experiment.IsTrialRunning)
+
+            if (_experiment.IsTrialRunning)
+            {
+                _timeToIntercept.Tick(Time.timeSinceLevelLoad);
+
+                var time = _timeToIntercept.Estimate();
+                if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
+                {
+                    _hasAdvertisementStarted = true;
+                }
+
+                if (time < _currentTrial.GoalkeeperStartBeforeKick & ! _hasGoalkeeperStarted)
+                {
+                    _hasGoalkeeperStarted = true;
+                    _goalkeeper.Dive();
+                }
+            }
+            else
+            {
                 GoToNextTrial();
+            }
         }
 
         [ContextMenu("Calibrate")]
@@ -48,14 +70,26 @@ namespace VUPenalty
         [ContextMenu("Simulate Go to next trial")]
         private void GoToNextTrial()
         {
-            Debug.Log($"Start with next trial");
-            var trial = _experiment.MoveNext();
-            SetupTrial(trial);
-            _experiment.IsTrialRunning = true;
+
+            if (_experiment.MoveNext())
+            {
+                Debug.Log($"Start with next trial");
+                _currentTrial = _experiment.CurrentTrial;
+                SetupTrial(_currentTrial);
+                _experiment.IsTrialRunning = true;
+            }
+            else
+            {
+                Debug.Log("Experiment has finished");
+            }
+            
         }
 
         void SetupTrial(TrialInformation trial)
         {
+            _hasAdvertisementStarted = false;
+            _hasGoalkeeperStarted = false;
+            
             _ballGO = Instantiate(_ballPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
             _ball = _ballGO.GetComponent<Ball>();
 
@@ -64,15 +98,18 @@ namespace VUPenalty
             _goalkeeper.JumpDirection = trial.JumpDirection;
 
             _videoDisplay.Video = trial.Video;
-            _videoDisplay.SetSize(trial.VideoWidth, trial.VideoHeight);
+            _videoDisplay.SetSize(_experiment.VideoWidth, _experiment.VideoHeight);
+            _videoDisplay.PlayAfter(trial.AdvertisementStartBeforeKick);
 
+            _timeToIntercept.From(_user.Head.transform);
+            _timeToIntercept.To(_ball.transform);
+            
             _experiment.Foot = _foot;
             
             // Events
             _ball.OnKick += _experiment.OnKicked;
             _targetAreaSuccess.OnKick += _experiment.OnKickEnded;
             _targetAreaMissed.OnKick += _experiment.OnKickEnded;
-            _ball.OnKick += _goalkeeper.Dive;
             _experiment.OnTrialEnd += OnTrialEnded;
             
             // Timing dependent variables
@@ -100,7 +137,7 @@ namespace VUPenalty
             Destroy(_goalkeeperGO);
             Destroy(_experimentGO);
         }
-        
+
         GameObject _userGO;
         GameObject _ballGO;
         Ball _ball;
@@ -108,5 +145,9 @@ namespace VUPenalty
         Goalkeeper _goalkeeper;
         GameObject _experimentGO;
         private User _user;
+        private TimeToIntercept _timeToIntercept;
+        private TrialInformation _currentTrial;
+        private bool _hasAdvertisementStarted;
+        private bool _hasGoalkeeperStarted;
     }
 }

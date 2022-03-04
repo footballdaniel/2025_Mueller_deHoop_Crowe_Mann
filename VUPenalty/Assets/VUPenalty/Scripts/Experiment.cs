@@ -11,6 +11,8 @@ namespace VUPenalty
     {
         [SerializeField] string _participantName = "FirstName_LastName";
         [SerializeField] string _researchInstitution = "VU";
+        [Range(1f, 10f)] public float VideoHeight = 1f;
+        [Range(1f, 20f)] public float VideoWidth = 10f;
         [SerializeField] float _durationOfDataToSave = 2f;
 
         public List<TrialInformation> Trials;
@@ -64,15 +66,18 @@ namespace VUPenalty
 
         void FixedUpdate()
         {
-            var secondsOfStoredPositions = _footMovementBuffer.Count * Time.fixedDeltaTime;
-            if (secondsOfStoredPositions < _durationOfDataToSave)
+            if (IsTrialRunning)
             {
-                _footMovementBuffer.Enqueue(Foot.transform.position);
-            }
-            else
-            {
-                _footMovementBuffer.Dequeue();
-                _footMovementBuffer.Enqueue(Foot.transform.position);
+                var secondsOfStoredPositions = _footMovementBuffer.Count * Time.fixedDeltaTime;
+                if (secondsOfStoredPositions < _durationOfDataToSave)
+                {
+                    _footMovementBuffer.Enqueue(Foot.transform.position);
+                }
+                else
+                {
+                    _footMovementBuffer.Dequeue();
+                    _footMovementBuffer.Enqueue(Foot.transform.position);
+                }
             }
         }
 
@@ -81,11 +86,19 @@ namespace VUPenalty
         KickStartEvent _currentKickStart;
         KickEndEvent _currentKickEnd;
 
-        public TrialInformation MoveNext()
+        public bool MoveNext()
         {
             _currentTrial++;
-            return _currentTrial < Trials.Count ? Trials[_currentTrial] : null;
+
+            var canProceed = _currentTrial < Trials.Count;
+
+            if (canProceed)
+                CurrentTrial = Trials[_currentTrial];
+            
+            return canProceed;
         }
+
+        public TrialInformation CurrentTrial;
         
         int _currentTrial = -1;
     }
@@ -101,9 +114,8 @@ namespace VUPenalty
     public class TrialInformation
     {
         public VideoClip Video;
-        [Range(1f, 10f)] public float VideoHeight = 1f;
-        [Range(1f, 20f)] public float VideoWidth = 10f;
-        [Range(0f, 1f)] public float AnticipationTime;
+        [Range(0f, 1f)] public float GoalkeeperStartBeforeKick;
+        [Range(0f, 1f)] public float AdvertisementStartBeforeKick;
         public JumpDirection JumpDirection;
     }
 

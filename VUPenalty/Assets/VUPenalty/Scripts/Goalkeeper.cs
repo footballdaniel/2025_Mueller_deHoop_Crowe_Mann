@@ -7,7 +7,7 @@ namespace VUPenalty
         public JumpDirection JumpDirection;
         [SerializeField] Animator _animator;
 
-        public void Dive(KickStartEvent obj)
+        public void Dive()
         {
             switch (JumpDirection)
             {
