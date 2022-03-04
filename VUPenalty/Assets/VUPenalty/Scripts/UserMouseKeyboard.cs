@@ -1,17 +1,15 @@
 using UnityEngine;
-using VUPenalty;
+using VU.Scripts;
 
-namespace VU.Scripts
+namespace VUPenalty
 {
     public class UserMouseKeyboard : User
     {
         [SerializeField] RuntimeAnimatorController _fakeKick;
         [SerializeField] UserInput _userInput;
         
-        
-        public override GazeInformation Gaze { get; }
-        public override HeadInformation Head { get; }
         public override Transform FootRootElement => transform;
+        public override Transform Head { get; }
 
         public override void Use(Foot foot)
         {

@@ -20,13 +20,13 @@ namespace VUPenalty
         [SerializeField] TargetArea _targetAreaSuccess;
         [SerializeField] TargetArea _targetAreaMissed;
         [SerializeField] private VideoDisplay _videoDisplay;
+        [SerializeField] private StartArea _startArea;
 
         void Awake()
         {
             var userGameObject = Instantiate(_userPrefab);
             _user = userGameObject.GetComponent<User>();
             _user.Use(_foot);
-
             _timeToIntercept = new TimeToIntercept();
 
         }
@@ -44,15 +44,20 @@ namespace VUPenalty
                 _timeToIntercept.Tick(Time.timeSinceLevelLoad);
 
                 var time = _timeToIntercept.Estimate();
-                if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
+                
+                if (_startArea.IsObserverInStartArea)
                 {
-                    _hasAdvertisementStarted = true;
-                }
+                    if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
+                    {
+                        _hasAdvertisementStarted = true;
+                        _videoDisplay.Play();
+                    }
 
-                if (time < _currentTrial.GoalkeeperStartBeforeKick & ! _hasGoalkeeperStarted)
-                {
-                    _hasGoalkeeperStarted = true;
-                    _goalkeeper.Dive();
+                    if (time < _currentTrial.GoalkeeperStartBeforeKick & ! _hasGoalkeeperStarted)
+                    {
+                        _hasGoalkeeperStarted = true;
+                        _goalkeeper.Dive();
+                    }
                 }
             }
             else
@@ -99,9 +104,8 @@ namespace VUPenalty
 
             _videoDisplay.Video = trial.Video;
             _videoDisplay.SetSize(_experiment.VideoWidth, _experiment.VideoHeight);
-            _videoDisplay.PlayAfter(trial.AdvertisementStartBeforeKick);
 
-            _timeToIntercept.From(_user.Head.transform);
+            _timeToIntercept.From(_user.Head);
             _timeToIntercept.To(_ball.transform);
             
             _experiment.Foot = _foot;
@@ -111,11 +115,8 @@ namespace VUPenalty
             _targetAreaSuccess.OnKick += _experiment.OnKickEnded;
             _targetAreaMissed.OnKick += _experiment.OnKickEnded;
             _experiment.OnTrialEnd += OnTrialEnded;
-            
-            // Timing dependent variables
-            _videoDisplay.Play();
         }
-
+        
         void OnTrialEnded()
         {
             var data = _experiment.SaveTrialData();

@@ -6,11 +6,10 @@ namespace VUPenalty
     public class UserVR : User
     {
         [SerializeField] Transform _footRoot;
-        [SerializeField] GazeInformation _gazeInformation;
-        [SerializeField] HeadInformation _headInformation;
+        [SerializeField] Camera _camera;
 
-        public override GazeInformation Gaze => _gazeInformation;
-        public override HeadInformation Head => _headInformation;
+        public override Transform Head => _camera.transform;
+
         public override Transform FootRootElement => _footRoot;
 
         public override void Use(Foot foot)

@@ -5,10 +5,10 @@ namespace VUPenalty
 {
     public abstract class User : MonoBehaviour
     {
-        public abstract GazeInformation Gaze { get; }
-        public abstract HeadInformation Head { get; }
-
         public abstract Transform FootRootElement { get; }
+        
+        public abstract Transform Head { get; }
+        
         public abstract void Use(Foot foot);
 
         public void Calibrate(Foot foot)

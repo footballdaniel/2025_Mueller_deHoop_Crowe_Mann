@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -21,18 +19,6 @@ namespace VUPenalty
         {
             _videoPlayer.clip = Video;
             _videoPlayer.Play();
-        }
-
-        public void PlayAfter(float seconds)
-        {
-            _videoPlayer.clip = Video;
-            StartCoroutine(Delay(seconds, _videoPlayer.Play));
-        }
-
-        IEnumerator Delay(float seconds, Action callback)
-        {
-            yield return new WaitForSeconds(seconds);
-            callback();
         }
     }
 }

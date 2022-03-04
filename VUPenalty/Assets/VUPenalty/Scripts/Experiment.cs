@@ -19,7 +19,32 @@ namespace VUPenalty
         [HideInInspector] public Foot Foot;
 
         [HideInInspector] public bool IsTrialRunning;
-        
+        [HideInInspector] public TrialInformation CurrentTrial;
+
+        readonly Queue<Vector3> _footMovementBuffer = new();
+        KickEndEvent _currentKickEnd;
+        KickStartEvent _currentKickStart;
+
+        int _currentTrial = -1;
+        Queue<Vector3> _footTrajectoryAtKick;
+
+        void FixedUpdate()
+        {
+            if (IsTrialRunning)
+            {
+                var secondsOfStoredPositions = _footMovementBuffer.Count * Time.fixedDeltaTime;
+                if (secondsOfStoredPositions < _durationOfDataToSave)
+                {
+                    _footMovementBuffer.Enqueue(Foot.transform.position);
+                }
+                else
+                {
+                    _footMovementBuffer.Dequeue();
+                    _footMovementBuffer.Enqueue(Foot.transform.position);
+                }
+            }
+        }
+
         public event Action OnTrialEnd;
 
         public void OnKicked(KickStartEvent kickStart)
@@ -28,7 +53,7 @@ namespace VUPenalty
             _footTrajectoryAtKick = new Queue<Vector3>(_footMovementBuffer);
             StartCoroutine(Delay(3f, OnTrialEnd));
         }
-        
+
         IEnumerator Delay(float duration, Action callback)
         {
             yield return new WaitForSeconds(duration);
@@ -64,28 +89,6 @@ namespace VUPenalty
             return trial;
         }
 
-        void FixedUpdate()
-        {
-            if (IsTrialRunning)
-            {
-                var secondsOfStoredPositions = _footMovementBuffer.Count * Time.fixedDeltaTime;
-                if (secondsOfStoredPositions < _durationOfDataToSave)
-                {
-                    _footMovementBuffer.Enqueue(Foot.transform.position);
-                }
-                else
-                {
-                    _footMovementBuffer.Dequeue();
-                    _footMovementBuffer.Enqueue(Foot.transform.position);
-                }
-            }
-        }
-
-        readonly Queue<Vector3> _footMovementBuffer = new();
-        Queue<Vector3> _footTrajectoryAtKick;
-        KickStartEvent _currentKickStart;
-        KickEndEvent _currentKickEnd;
-
         public bool MoveNext()
         {
             _currentTrial++;
@@ -97,10 +100,6 @@ namespace VUPenalty
             
             return canProceed;
         }
-
-        public TrialInformation CurrentTrial;
-        
-        int _currentTrial = -1;
     }
 
     [Serializable]
