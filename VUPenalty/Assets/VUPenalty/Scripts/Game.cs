@@ -20,15 +20,13 @@ namespace VUPenalty
         [SerializeField] TargetArea _targetAreaSuccess;
         [SerializeField] TargetArea _targetAreaMissed;
         [SerializeField] private VideoDisplay _videoDisplay;
-        [SerializeField] private StartArea _startArea;
 
         void Awake()
         {
             var userGameObject = Instantiate(_userPrefab);
             _user = userGameObject.GetComponent<User>();
             _user.Use(_foot);
-            _timeToIntercept = new TimeToIntercept();
-
+            _timeToIntercept = new TimeToIntercept1D();
         }
 
         void Start()
@@ -41,23 +39,22 @@ namespace VUPenalty
 
             if (_experiment.IsTrialRunning)
             {
-                _timeToIntercept.Tick(Time.timeSinceLevelLoad);
+                _timeToIntercept.Tick(Time.deltaTime);
 
                 var time = _timeToIntercept.Estimate();
                 
-                if (_startArea.IsObserverInStartArea)
+                DebugGraph.Log(time, Color.black);
+                
+                if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
                 {
-                    if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
-                    {
-                        _hasAdvertisementStarted = true;
-                        _videoDisplay.Play();
-                    }
+                    _hasAdvertisementStarted = true;
+                    _videoDisplay.Play();
+                }
 
-                    if (time < _currentTrial.GoalkeeperStartBeforeKick & ! _hasGoalkeeperStarted)
-                    {
-                        _hasGoalkeeperStarted = true;
-                        _goalkeeper.Dive();
-                    }
+                if (time < _currentTrial.GoalkeeperStartBeforeKick & ! _hasGoalkeeperStarted)
+                {
+                    _hasGoalkeeperStarted = true;
+                    _goalkeeper.Dive();
                 }
             }
             else
@@ -146,7 +143,7 @@ namespace VUPenalty
         Goalkeeper _goalkeeper;
         GameObject _experimentGO;
         private User _user;
-        private TimeToIntercept _timeToIntercept;
+        private TimeToIntercept1D _timeToIntercept;
         private TrialInformation _currentTrial;
         private bool _hasAdvertisementStarted;
         private bool _hasGoalkeeperStarted;
