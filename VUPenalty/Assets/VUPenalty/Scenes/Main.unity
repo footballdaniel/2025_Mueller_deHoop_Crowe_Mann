@@ -462,9 +462,13 @@ MonoBehaviour:
   _participantName: FirstName_LastName
   _researchInstitution: VU
   VideoHeight: 1
-  VideoWidth: 10
+  VideoWidth: 7.32
   _durationOfDataToSave: 2
   Trials:
+  - Video: {fileID: 32900000, guid: 58efc3a98ea457c43a03accbea443f3b, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    JumpDirection: 0
   - Video: {fileID: 32900000, guid: 51740beefd249fb4fac526912cd5edff, type: 3}
     GoalkeeperStartBeforeKick: 0.5
     AdvertisementStartBeforeKick: 0.5

@@ -114,7 +114,7 @@ namespace VUPenalty
     {
         public VideoClip Video;
         [Range(0f, 1f)] public float GoalkeeperStartBeforeKick;
-        [Range(0f, 1f)] public float AdvertisementStartBeforeKick;
+        [Range(0f, 10f)] public float AdvertisementStartBeforeKick;
         public JumpDirection JumpDirection;
     }
 

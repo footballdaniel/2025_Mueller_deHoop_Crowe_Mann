@@ -39,9 +39,13 @@ namespace VUPenalty
         {
             GoToNextTrial();
         }
+
+        [ContextMenu("Play Video")]
+        void PlayVideo()
+        {
+            _videoDisplay.Play();
+        }
         
-
-
         private void Update()
         {
             _warmupCounter++;
