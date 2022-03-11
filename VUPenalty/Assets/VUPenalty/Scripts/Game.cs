@@ -54,7 +54,7 @@ namespace VUPenalty
 
                     var time = _timeToIntercept.Estimate();
 
-                    if (time > 0)
+                    if (Camera.main.transform.position.z < 0)
                     {
                         if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
                         {
@@ -153,7 +153,7 @@ namespace VUPenalty
 
         private void OnGUI()
         {
-            GUI.Label(new Rect(50f, 50f, 500f, 50f), $"Participant is in run up position: {_timeToIntercept.Estimate() > 0}");
+            GUI.Label(new Rect(50f, 50f, 500f, 50f), $"Participant is in run up position: {Camera.main.transform.position.z < 0}");
         }
 
         GameObject _userGO;

@@ -13,8 +13,8 @@ namespace VUPenalty
 
         public void Calibrate(Foot foot)
         {
-            var offset = transform.rotation;
-            foot.transform.rotation *= Quaternion.Inverse(offset);
+            var offset = FootRootElement.transform.rotation;
+            foot.RotateModel(offset);
         }
     }
 }
