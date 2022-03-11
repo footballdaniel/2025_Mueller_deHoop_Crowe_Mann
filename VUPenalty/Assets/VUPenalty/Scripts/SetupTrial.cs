@@ -24,7 +24,7 @@ namespace VUPenalty
             _context.Goalkeeper.JumpDirection = _context.ActiveTrial.JumpDirection;
 
             _context.VideoDisplay.LoadVideo(_context.ActiveTrial.Video);
-            _context.VideoDisplay.SetSize(_context.Experiment.VideoWidth, _context.Experiment.VideoHeight);
+            _context.VideoDisplay.SetSize(_context.ExperimentalData.VideoWidth, _context.ExperimentalData.VideoHeight);
 
             _context.ChangeState(new WaitForKick(_context));
         }

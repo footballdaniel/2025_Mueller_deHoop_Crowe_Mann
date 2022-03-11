@@ -16,7 +16,7 @@ namespace VUPenalty
         public event Action OnReadyForNextTrial;
 
         public TrialSetting ActiveTrial { get; set; }
-        public Experiment Experiment { get; set; }
+        public ExperimentalData ExperimentalData { get; set; }
         public Ball Ball { get; set; }
         public User User { get; set; }
         public Goalkeeper Goalkeeper { get; set; }

@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
 namespace VUPenalty
 {
-    public class Experiment : MonoBehaviour
+    public class ExperimentalData : MonoBehaviour
     {
         public string ParticipantName = "FirstName_LastName";
         public string ResearchInstitution = "VU";

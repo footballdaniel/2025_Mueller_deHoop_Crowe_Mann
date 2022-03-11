@@ -1,5 +1,4 @@
 using UnityEngine;
-using VU.Scripts;
 
 namespace VUPenalty
 {

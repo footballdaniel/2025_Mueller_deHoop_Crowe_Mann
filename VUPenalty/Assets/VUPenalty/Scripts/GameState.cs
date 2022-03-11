@@ -4,7 +4,7 @@
     {
         protected readonly Game _context;
 
-        public GameState(Game game)
+        protected GameState(Game game)
         {
             _context = game;
         }

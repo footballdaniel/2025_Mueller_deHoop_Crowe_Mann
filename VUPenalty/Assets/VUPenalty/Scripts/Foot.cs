@@ -4,7 +4,7 @@ namespace VUPenalty
 {
     public class Foot : MonoBehaviour
     {
-        [SerializeField] private Transform _model;
+        [SerializeField] Transform _model;
 
         public void AttachTo(Transform rootObject)
         {

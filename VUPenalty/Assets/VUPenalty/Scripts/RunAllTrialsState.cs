@@ -10,14 +10,14 @@ namespace VUPenalty
 
         public override void Init()
         {
-            _experiment = _context.Experiment.GetComponent<Experiment>();
+            _experimentalData = _context.Experiment.GetComponent<ExperimentalData>();
             _experimentController = _context.Experiment.GetComponent<ExperimentController>();
-            _experimentController.Experiment = _experiment;
+            _experimentController.ExperimentalData = _experimentalData;
             _experimentController.User = _context.ActiveUser;
             _experimentController.Foot = _context.Foot;
             
             _experimentController.OnReadyForNextTrial += ReadyForNextTrial;
-            _NumberOfTrials = _experiment.TrialSettings.Count;
+            _NumberOfTrials = _experimentalData.TrialSettings.Count;
             _Current = -1;
             
             ReadyForNextTrial();
@@ -35,12 +35,12 @@ namespace VUPenalty
         void ReadyForNextTrial()
         {
             Debug.Log("Ready for next trial if trial is available");
+            _Current++;
             
             if (_Current < _NumberOfTrials)
             {
-                _Current++;
                 Debug.Log($"Loading Trial number {_Current}");
-                _experimentController.ActiveTrial = _experiment.TrialSettings[_Current];
+                _experimentController.ActiveTrial = _experimentalData.TrialSettings[_Current];
                 _experimentController.ChangeState(new SetupTrial(_experimentController));
             }
             else
@@ -50,7 +50,7 @@ namespace VUPenalty
         }
         
         ExperimentController _experimentController;
-        Experiment _experiment;
+        ExperimentalData _experimentalData;
         int _NumberOfTrials;
         int _Current;
     }

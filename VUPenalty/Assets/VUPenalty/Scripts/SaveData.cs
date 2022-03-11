@@ -10,11 +10,8 @@ namespace VUPenalty
 
         public override void Init()
         {
-            // var trialData = GetTrialData();
-            
             
             _context.ReadyForNextTrial();
-            
         }
 
 
@@ -22,8 +19,8 @@ namespace VUPenalty
         {
             var trial = new TrialData()
             {
-                ParticipantName = _context.Experiment.ParticipantName,
-                ResearchInstitution = _context.Experiment.ResearchInstitution,
+                ParticipantName = _context.ExperimentalData.ParticipantName,
+                ResearchInstitution = _context.ExperimentalData.ResearchInstitution,
                 DateTime = DateTime.Now.ToString("yyyy_M_dd_HH_mm_ss"),
                 Events = new EventData()
                 {

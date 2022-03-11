@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class FootModel : MonoBehaviour
+namespace VUPenalty
 {
+	public class FootModel : MonoBehaviour
+	{
 	
+	}
 }
 
