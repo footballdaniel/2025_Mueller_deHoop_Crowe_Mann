@@ -508,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7e49fd6df7ffc4788580e1d690824b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _userPrefab: {fileID: 3082566005953751452, guid: 3c5060e04175c604484ae9fd4c376045, type: 3}
+  _userPrefab: {fileID: 3082566005953751452, guid: d7e2004b77706264a9db7ca4301a7f87, type: 3}
   _ballPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
   _goalkeeperPrefab: {fileID: 5462292101878927168, guid: 55b88a8836c59824eb9ae3b87374f3a3, type: 3}
   _experiment: {fileID: 437768095}
@@ -1770,9 +1770,9 @@ Transform:
   m_Children:
   - {fileID: 1195997942}
   - {fileID: 1128548381}
+  - {fileID: 1014930249}
   - {fileID: 782919179}
   - {fileID: 1475379259}
-  - {fileID: 1014930249}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

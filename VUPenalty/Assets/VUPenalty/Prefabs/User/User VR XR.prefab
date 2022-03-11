@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 3082566005953751450}
   - component: {fileID: 3082566005953751453}
   m_Layer: 0
-  m_Name: User VR
+  m_Name: User VR XR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
