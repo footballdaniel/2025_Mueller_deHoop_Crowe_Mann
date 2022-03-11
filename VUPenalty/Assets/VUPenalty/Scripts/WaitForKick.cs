@@ -32,8 +32,6 @@ namespace VUPenalty
             _timeToIntercept.Tick(deltaTime);
             var timeToKick = _timeToIntercept.Estimate();
             
-            Debug.Log($"{_timeToIntercept.Prediction(1f)} and {_timeToIntercept.Estimate()}");
-
             if (_context.InterceptSphere.gameObject != null)
             {
                 var prediction = _timeToIntercept.Prediction(_context.ActiveTrial.GoalkeeperStartBeforeKick);
