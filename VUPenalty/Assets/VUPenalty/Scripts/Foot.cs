@@ -5,7 +5,7 @@ namespace VUPenalty
     public class Foot : MonoBehaviour
     {
         [SerializeField] private Transform _model;
-        
+
         public void AttachTo(Transform rootObject)
         {
             transform.SetParent(rootObject, false);
@@ -15,7 +15,5 @@ namespace VUPenalty
         {
             _model.transform.rotation *= Quaternion.Inverse(rotation);
         }
-        
-        
     }
 }

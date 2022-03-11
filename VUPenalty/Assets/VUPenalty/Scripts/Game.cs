@@ -155,10 +155,10 @@ namespace VUPenalty
             Destroy(_experimentGO);
         }
 
-        private void OnGUI()
-        {
-            GUI.Label(new Rect(50f, 50f, 500f, 50f), $"Participant is in run up position: {Camera.main.transform.position.z < 0}");
-        }
+        // private void OnGUI()
+        // {
+        //     GUI.Label(new Rect(50f, 50f, 500f, 50f), $"Participant is in run up position: {Camera.main.transform.position.z < 0}");
+        // }
 
         GameObject _userGO;
         GameObject _ballGO;
