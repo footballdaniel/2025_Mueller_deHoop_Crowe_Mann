@@ -7,6 +7,13 @@ namespace VUPenalty
         public JumpDirection JumpDirection;
         [SerializeField] Animator _animator;
 
+        [ContextMenu("Dive Right")]
+        void DiveRight()
+        {
+            JumpDirection = JumpDirection.Right;
+            Dive();
+        }
+
         public void Dive()
         {
             switch (JumpDirection)

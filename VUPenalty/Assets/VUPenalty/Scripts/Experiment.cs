@@ -19,7 +19,7 @@ namespace VUPenalty
         [HideInInspector] public Foot Foot;
 
         [HideInInspector] public bool IsTrialRunning;
-        [HideInInspector] public TrialInformation CurrentTrial;
+        [HideInInspector] public TrialInformation Current;
 
         readonly Queue<Vector3> _footMovementBuffer = new();
         KickEndEvent _currentKickEnd;
@@ -96,7 +96,7 @@ namespace VUPenalty
             var canProceed = _currentTrial < Trials.Count;
 
             if (canProceed)
-                CurrentTrial = Trials[_currentTrial];
+                Current = Trials[_currentTrial];
             
             return canProceed;
         }

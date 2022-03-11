@@ -452,7 +452,6 @@ MonoBehaviour:
   _targetAreaSuccess: {fileID: 782919181}
   _targetAreaMissed: {fileID: 1475379260}
   _videoDisplay: {fileID: 1195997943}
-  _startArea: {fileID: 0}
 --- !u!4 &526537781
 Transform:
   m_ObjectHideFlags: 0
@@ -508,7 +507,7 @@ MonoBehaviour:
     JumpDirection: 0
   Foot: {fileID: 0}
   IsTrialRunning: 0
-  CurrentTrial:
+  Current:
     Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 0

@@ -8,6 +8,16 @@ namespace VUPenalty
     {
         public event Action<KickStartEvent> OnKick;
 
+        public void SimulateKick()
+        {
+            OnKick?.Invoke(new KickStartEvent()
+                {
+                    Origin = _startPosition,
+                    VelocityVector = Vector3.zero
+                }
+            );
+        }
+
 
         void OnTriggerEnter(Collider other)
         {
@@ -65,10 +75,10 @@ namespace VUPenalty
                 Origin = _startPosition,
                 VelocityVector = kickDirection
             };
-            
+
             OnKick?.Invoke(kickData);
         }
-        
+
         bool _isCoolDown;
         Vector3 _endPosition;
         bool _isKickInProgress;

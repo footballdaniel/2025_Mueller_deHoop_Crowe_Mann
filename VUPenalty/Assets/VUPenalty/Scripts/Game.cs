@@ -21,6 +21,12 @@ namespace VUPenalty
         [SerializeField] TargetArea _targetAreaMissed;
         [SerializeField] private VideoDisplay _videoDisplay;
 
+        [ContextMenu("Simulate Kick")]
+        void SimulateKick()
+        {
+            _ball.SimulateKick();
+        }
+
         void Awake()
         {
             var userGameObject = Instantiate(_userPrefab);
@@ -33,34 +39,42 @@ namespace VUPenalty
         {
             GoToNextTrial();
         }
+        
+
 
         private void Update()
         {
+            _warmupCounter++;
 
-            if (_experiment.IsTrialRunning)
+            if (_warmupCounter > 300)
             {
-                _timeToIntercept.Tick(Time.deltaTime);
-
-                var time = _timeToIntercept.Estimate();
-                
-                DebugGraph.Log(time, Color.black);
-                
-                if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
+                if (_experiment.IsTrialRunning)
                 {
-                    _hasAdvertisementStarted = true;
-                    _videoDisplay.Play();
+                    _timeToIntercept.Tick(Time.deltaTime);
+
+                    var time = _timeToIntercept.Estimate();
+
+                    if (time > 0)
+                    {
+                        if (time < _currentTrial.AdvertisementStartBeforeKick & ! _hasAdvertisementStarted)
+                        {
+                            _hasAdvertisementStarted = true;
+                            _videoDisplay.Play();
+                        }
+
+                        if (time < _currentTrial.GoalkeeperStartBeforeKick & ! _hasGoalkeeperStarted)
+                        {
+                            _hasGoalkeeperStarted = true;
+                            _goalkeeper.Dive();
+                        }
+                    }
                 }
-
-                if (time < _currentTrial.GoalkeeperStartBeforeKick & ! _hasGoalkeeperStarted)
+                else
                 {
-                    _hasGoalkeeperStarted = true;
-                    _goalkeeper.Dive();
+                    GoToNextTrial();
                 }
             }
-            else
-            {
-                GoToNextTrial();
-            }
+
         }
 
         [ContextMenu("Calibrate")]
@@ -69,6 +83,7 @@ namespace VUPenalty
             _user.Calibrate(_foot);
         }
 
+
         [ContextMenu("Simulate Go to next trial")]
         private void GoToNextTrial()
         {
@@ -76,7 +91,7 @@ namespace VUPenalty
             if (_experiment.MoveNext())
             {
                 Debug.Log($"Start with next trial");
-                _currentTrial = _experiment.CurrentTrial;
+                _currentTrial = _experiment.Current;
                 SetupTrial(_currentTrial);
                 _experiment.IsTrialRunning = true;
             }
@@ -103,7 +118,7 @@ namespace VUPenalty
             _videoDisplay.SetSize(_experiment.VideoWidth, _experiment.VideoHeight);
 
             _timeToIntercept.From(_user.Head);
-            _timeToIntercept.To(_ball.transform);
+            _timeToIntercept.To(_ballGO.transform);
             
             _experiment.Foot = _foot;
             
@@ -136,6 +151,11 @@ namespace VUPenalty
             Destroy(_experimentGO);
         }
 
+        private void OnGUI()
+        {
+            GUI.Label(new Rect(50f, 50f, 500f, 50f), $"Participant is in run up position: {_timeToIntercept.Estimate() > 0}");
+        }
+
         GameObject _userGO;
         GameObject _ballGO;
         Ball _ball;
@@ -147,5 +167,6 @@ namespace VUPenalty
         private TrialInformation _currentTrial;
         private bool _hasAdvertisementStarted;
         private bool _hasGoalkeeperStarted;
+        private int _warmupCounter;
     }
 }
