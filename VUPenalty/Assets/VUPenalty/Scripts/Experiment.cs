@@ -7,7 +7,7 @@ using UnityEngine.Video;
 
 namespace VUPenalty
 {
-    public class Experiment : MonoBehaviour
+    public class Experiment : MonoBehaviour, IEnumerable<TrialSetting>
     {
         [SerializeField] string _participantName = "FirstName_LastName";
         [SerializeField] string _researchInstitution = "VU";
@@ -15,11 +15,11 @@ namespace VUPenalty
         [Range(1f, 20f)] public float VideoWidth = 10f;
         [SerializeField] float _durationOfDataToSave = 2f;
 
-        public List<TrialInformation> Trials;
+        public List<TrialSetting> TrialSettings;
         [HideInInspector] public Foot Foot;
 
         [HideInInspector] public bool IsTrialRunning;
-        [HideInInspector] public TrialInformation Current;
+        [HideInInspector] public TrialSetting Current;
 
         readonly Queue<Vector3> _footMovementBuffer = new();
         KickEndEvent _currentKickEnd;
@@ -83,7 +83,7 @@ namespace VUPenalty
                 {
                     Foot = _footTrajectoryAtKick.Select<Vector3, Point3D>(x => x).ToList()
                 },
-                JumpDirection = Trials[_currentTrial].JumpDirection
+                JumpDirection = TrialSettings[_currentTrial].JumpDirection
             };
 
             return trial;
@@ -93,12 +93,22 @@ namespace VUPenalty
         {
             _currentTrial++;
 
-            var canProceed = _currentTrial < Trials.Count;
+            var canProceed = _currentTrial < TrialSettings.Count;
 
             if (canProceed)
-                Current = Trials[_currentTrial];
+                Current = TrialSettings[_currentTrial];
             
             return canProceed;
+        }
+
+        public IEnumerator<TrialSetting> GetEnumerator()
+        {
+            return TrialSettings.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 
@@ -110,7 +120,7 @@ namespace VUPenalty
     }
     
     [Serializable]
-    public class TrialInformation
+    public class TrialSetting
     {
         public VideoClip Video;
         [Range(0f, 1f)] public float GoalkeeperStartBeforeKick;
