@@ -1,4 +1,6 @@
-﻿namespace VUPenalty
+﻿using UnityEngine;
+
+namespace VUPenalty
 {
     class RunAllTrialsState : GameState
     {
@@ -11,9 +13,14 @@
             _experiment = _context.Experiment.GetComponent<Experiment>();
             _experimentController = _context.Experiment.GetComponent<ExperimentController>();
             _experimentController.Experiment = _experiment;
-
-            _currentTrialSetting = _experimentController.ActiveTrial;
-            OnReadyForNextExperiment();
+            _experimentController.User = _context.ActiveUser;
+            _experimentController.Foot = _context.Foot;
+            
+            _experimentController.OnReadyForNextTrial += ReadyForNextTrial;
+            _NumberOfTrials = _experiment.TrialSettings.Count;
+            _Current = -1;
+            
+            ReadyForNextTrial();
         }
 
         public override void Tick(float deltaTime)
@@ -22,24 +29,29 @@
 
         public override void Finish()
         {
+            _experimentController.OnReadyForNextTrial -= ReadyForNextTrial;
         }
 
-        void OnReadyForNextExperiment()
+        void ReadyForNextTrial()
         {
-            if (_experiment.MoveNext())
+            Debug.Log("Ready for next trial if trial is available");
+            
+            if (_Current < _NumberOfTrials)
             {
-                _experimentController.ActiveTrial = _currentTrialSetting;
-                _experimentController.OnTrialEnd += OnReadyForNextExperiment;
-                _experimentController.ChangeState(new SetupExperimentState(_experimentController));
+                _Current++;
+                Debug.Log($"Loading Trial number {_Current}");
+                _experimentController.ActiveTrial = _experiment.TrialSettings[_Current];
+                _experimentController.ChangeState(new SetupTrial(_experimentController));
             }
             else
             {
                 _context.ChangeState(new EndState(_context));
             }
         }
-
-        TrialSetting _currentTrialSetting;
+        
         ExperimentController _experimentController;
         Experiment _experiment;
+        int _NumberOfTrials;
+        int _Current;
     }
 }

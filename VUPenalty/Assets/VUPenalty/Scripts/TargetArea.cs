@@ -7,12 +7,12 @@ namespace VUPenalty
     {
         [SerializeField] bool _representsSuccess;
         
-        public event Action<KickEndEvent> OnKick;
+        public event Action<KickEndEvent> OnHit;
         
         void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent<VUPenalty.Ball>(out var ball))
-                OnKick?.Invoke(new KickEndEvent()
+                OnHit?.Invoke(new KickEndEvent()
                 {
                     EndLocation = ball.transform.position,
                     Success = _representsSuccess

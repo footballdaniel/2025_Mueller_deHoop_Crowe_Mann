@@ -5,16 +5,12 @@ namespace VUPenalty
     public class Game : MonoBehaviour
     {
         [Header("Prefabs")] public GameObject UserPrefab;
-
-
-        [Header("Dependencies")] public GameObject Experiment;
+        
+        [Header("Dependencies")] 
+        public GameObject Experiment;
         public Foot Foot;
-        public TargetArea TargetAreaSuccess;
-        public TargetArea TargetAreaMissed;
-        public VideoDisplay VideoDisplay;
-
-        [HideInInspector] public TrialSetting ActiveTrialSetting;
-        [HideInInspector] public User ActiveUser;
+        
+        public User ActiveUser { get; set; }
 
         void Start()
         {
@@ -30,6 +26,7 @@ namespace VUPenalty
         {
             _currentState?.Finish();
             _currentState = newTrialState;
+            _currentState.Init();
         }
 
         GameState _currentState;

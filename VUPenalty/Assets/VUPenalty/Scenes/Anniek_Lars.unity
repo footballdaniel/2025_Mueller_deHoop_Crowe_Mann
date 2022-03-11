@@ -461,15 +461,6 @@ MonoBehaviour:
   UserPrefab: {fileID: 3082566005953751452, guid: d7e2004b77706264a9db7ca4301a7f87, type: 3}
   Experiment: {fileID: 1939875341}
   Foot: {fileID: 1014930250}
-  TargetAreaSuccess: {fileID: 782919181}
-  TargetAreaMissed: {fileID: 1475379260}
-  VideoDisplay: {fileID: 1195997943}
-  ActiveTrialSetting:
-    Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 0
-    JumpDirection: 0
-  ActiveUser: {fileID: 0}
 --- !u!1 &621400555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,9 +1715,9 @@ Transform:
   m_Children:
   - {fileID: 1195997942}
   - {fileID: 1128548381}
-  - {fileID: 1014930249}
   - {fileID: 782919179}
   - {fileID: 1475379259}
+  - {fileID: 1014930249}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2288,7 +2279,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BallPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
   GoalkeeperPrefab: {fileID: 5462292101878927168, guid: 55b88a8836c59824eb9ae3b87374f3a3, type: 3}
+  DataRecorderPrefab: {fileID: 8813671682206360325, guid: 2e16f14d9f685624bae4158a943057a4, type: 3}
   VideoDisplay: {fileID: 1195997943}
+  TargetAreaMissed: {fileID: 1475379260}
+  TargetAreaSuccess: {fileID: 782919181}
 --- !u!114 &1939875344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,11 +2295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcac2fe3a4454702bca34efb008dc46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _participantName: FirstName_LastName
-  _researchInstitution: VU
+  ParticipantName: FirstName_LastName
+  ResearchInstitution: VU
   VideoHeight: 1
   VideoWidth: 10
-  _durationOfDataToSave: 2
   TrialSettings:
   - Video: {fileID: 32900000, guid: b8b8e6631d1d0f84bbfad55ecc2bcca1, type: 3}
     GoalkeeperStartBeforeKick: 0
@@ -2315,10 +2308,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 0
     JumpDirection: 0
-  Foot: {fileID: 0}
-  IsTrialRunning: 0
-  Current:
-    Video: {fileID: 0}
+  - Video: {fileID: 32900000, guid: 1b0b5d72dab501d4ea449dab58112bfd, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 0
     JumpDirection: 0

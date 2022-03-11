@@ -5,23 +5,41 @@ namespace VUPenalty
 {
     public class ExperimentController : MonoBehaviour
     {
-        [Header("Prefabs")] 
-        public GameObject BallPrefab;
+        [Header("Prefabs")] public GameObject BallPrefab;
         public GameObject GoalkeeperPrefab;
-        ExperimentState _currentState;
+        public GameObject DataRecorderPrefab;
 
         [Header("Dependencies")] public VideoDisplay VideoDisplay;
-        
-        [HideInInspector] public TrialSetting ActiveTrial { get; set; }
+        public TargetArea TargetAreaMissed;
+        public TargetArea TargetAreaSuccess;
+
+        public event Action OnReadyForNextTrial;
+
+        public TrialSetting ActiveTrial { get; set; }
         public Experiment Experiment { get; set; }
+        public Ball Ball { get; set; }
+        public User User { get; set; }
+        public Goalkeeper Goalkeeper { get; set; }
+        public DataRecorder DataRecorder { get; set; }
+        public Foot Foot { get; set; }
 
-        public event Action OnTrialEnd;
+        ExperimentState _currentState;
 
-        public void ChangeState(SetupExperimentState newState)
+        public void ChangeState(ExperimentState newState)
         {
             _currentState?.Finish();
             _currentState = newState;
             _currentState.Init();
+        }
+
+        void Update()
+        {
+            _currentState?.Tick(Time.deltaTime);
+        }
+
+        public void ReadyForNextTrial()
+        {
+            OnReadyForNextTrial?.Invoke();
         }
     }
 }

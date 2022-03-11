@@ -12,14 +12,12 @@ namespace VUPenalty
         void OnTriggerEnter(Collider other)
         {
             if (_isCoolDown) return;
-
-            if (IsA<FootModel>(other.gameObject))
-            {
-                _footIsKickingBall = true;
-                _startTime = Time.time;
-                print("Foot kick detected");
-                _startPosition = other.transform.position;
-            }
+            if (!IsA<FootModel>(other.gameObject)) return;
+            
+            _footIsKickingBall = true;
+            _startTime = Time.time;
+            print("Foot kick detected");
+            _startPosition = other.transform.position;
         }
 
         void OnTriggerExit(Collider other)

@@ -2,10 +2,8 @@
 {
     public abstract class ExperimentState
     {
-
-        public Goalkeeper Goalkeeper;
         protected readonly ExperimentController _context;
-
+        
         protected ExperimentState(ExperimentController controller)
         {
             _context = controller;
