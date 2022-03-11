@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 53
+  controlID: 112
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1531,9 +1531,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 225d0000
-      m_LastClickedID: 23842
-      m_ExpandedIDs: 30fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: c2bdffffc8bdffff2ae8ffff30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1815,9 +1815,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.26932, y: -5.104899, z: 10.454009}
+    m_Target: {x: -10.187947, y: -5.570951, z: 1.5694182}
     speed: 2
-    m_Value: {x: -5.26932, y: -5.104899, z: 10.454009}
+    m_Value: {x: -10.187947, y: -5.570951, z: 1.5694182}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1863,13 +1863,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.23784165, y: -0.35010323, z: 0.092376485, w: 0.9013039}
+    m_Target: {x: 0.21037798, y: -0.5974921, z: 0.1663191, w: 0.75571537}
     speed: 2
-    m_Value: {x: 0.23797719, y: -0.34874687, z: 0.09201855, w: 0.9018176}
+    m_Value: {x: 0.21037552, y: -0.5974851, z: 0.16631716, w: 0.75570655}
   m_Size:
     m_Target: 10
     speed: 2
-    m_Value: 1.1902885
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -2074,8 +2074,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 317}
-    m_SelectedIDs: 123b0200
-    m_LastClickedID: 146194
+    m_SelectedIDs: bcea0000
+    m_LastClickedID: 60092
     m_ExpandedIDs: 00000000f4760000f6760000f8760000fa76000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2129,9 +2129,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 265d0000
-    m_LastClickedInstanceID: 23846
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000343b0200d8010000d65d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

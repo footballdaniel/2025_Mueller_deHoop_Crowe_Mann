@@ -29,7 +29,17 @@ namespace VUPenalty
 
         public override void Tick(float deltaTime)
         {
+            _timeToIntercept.Tick(deltaTime);
             var timeToKick = _timeToIntercept.Estimate();
+            
+            Debug.Log($"{_timeToIntercept.Prediction(1f)} and {_timeToIntercept.Estimate()}");
+
+            if (_context.InterceptSphere.gameObject != null)
+            {
+                var prediction = _timeToIntercept.Prediction(_context.ActiveTrial.GoalkeeperStartBeforeKick);
+                _context.InterceptSphere.transform.position =
+                    new Vector3(_context.User.Head.transform.position.x, 0, _context.User.Head.transform.position.z + prediction);
+            }
 
             if (timeToKick > 0)
             {

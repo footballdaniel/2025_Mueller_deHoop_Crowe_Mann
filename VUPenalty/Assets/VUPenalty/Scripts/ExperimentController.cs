@@ -13,6 +13,7 @@ namespace VUPenalty
         public TargetArea TargetAreaMissed;
         public TargetArea TargetAreaSuccess;
 
+        [Header("Debug")] public GameObject InterceptSphere;
         public event Action OnReadyForNextTrial;
 
         public TrialSetting ActiveTrial { get; set; }

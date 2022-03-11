@@ -4,11 +4,6 @@ namespace VUPenalty
 {
     public class TimeToIntercept1D
     {
-        float _averageZ;
-        float _lastZ;
-        Transform _target;
-        Transform _trackedObject;
-        
         public void To(Transform target)
         {
             _target = target;
@@ -29,6 +24,16 @@ namespace VUPenalty
             _averageZ = delta_z / deltaTime;
         }
 
+        public float Prediction(float seconds)
+        {
+            var prediction = _averageZ * seconds;
+
+            if (float.IsInfinity(prediction))
+                return 1000;
+            else
+                return prediction;
+        }
+
 
         public float Estimate()
         {
@@ -37,7 +42,16 @@ namespace VUPenalty
             var motionForward = _averageZ;
             var distance_z = target - trackedObject;
             var timeLeft = distance_z / motionForward;
-            return timeLeft;
+
+            if (float.IsInfinity(timeLeft))
+                return 1000;
+            else
+                return timeLeft;
         }
+
+        float _averageZ;
+        float _lastZ;
+        Transform _target;
+        Transform _trackedObject;
     }
 }
