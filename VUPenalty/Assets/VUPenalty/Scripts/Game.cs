@@ -5,8 +5,9 @@ namespace VUPenalty
     public class Game : MonoBehaviour
     {
         [Header("Prefabs")] public GameObject UserPrefab;
-        
+
         [Header("Dependencies")] 
+        public Ui UI;
         public GameObject Experiment;
         public Foot Foot;
         
@@ -22,10 +23,10 @@ namespace VUPenalty
             _currentState.Tick(Time.deltaTime);
         }
 
-        public void ChangeState(GameState newTrialState)
+        public void ChangeState(GameState newState)
         {
             _currentState?.Finish();
-            _currentState = newTrialState;
+            _currentState = newState;
             _currentState.Init();
         }
 

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,9 +7,14 @@ namespace VUPenalty
 {
     public class Ui : MonoBehaviour
     {
-        [Header("Dependencies")] [SerializeField] Button _toggleUi;
+        public event Action OnCalibratePress;
+        
+        
+        [Header("Dependencies")] 
+        [SerializeField] Button _toggleUi;
         [SerializeField] TMP_Text _savePathString;
         [SerializeField] Button _openExplorer;
+        [SerializeField] Button _calibrate;
         [SerializeField] CanvasGroup _UiContent;
     
         string SavePath => Application.persistentDataPath;
@@ -23,6 +29,7 @@ namespace VUPenalty
         {
             _openExplorer.onClick.AddListener(OpenExplorer);
             _toggleUi.onClick.AddListener(ToggleUi);
+            _calibrate.onClick.AddListener(InitiateCalibration);
         }
 
         void ToggleUi()
@@ -35,9 +42,15 @@ namespace VUPenalty
             Application.OpenURL($"file://{SavePath}");
         }
 
+        void InitiateCalibration()
+        {
+            OnCalibratePress?.Invoke();
+        }
+
         void OnDisable()
         {
             _openExplorer.onClick.RemoveListener(OpenExplorer);
         }
+        
     }
 }
