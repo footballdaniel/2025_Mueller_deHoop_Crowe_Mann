@@ -21,9 +21,11 @@ namespace VUPenalty
 
         public void LoadVideo(VideoClip video)
         {
-            _videoPlayer.clip = _video;
+            _videoPlayer.enabled = false;
+            _videoPlayer.clip = video;
             _videoPlayer.Play();
             _videoPlayer.Pause();
+            _videoPlayer.enabled = true;
         }
 
         public void Play()

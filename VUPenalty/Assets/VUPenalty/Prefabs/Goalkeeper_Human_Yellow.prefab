@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpDirection: 0
-  _animator: {fileID: 0}
+  _animator: {fileID: 7948274670996918752}
 --- !u!64 &1863497484681419026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -128,5 +128,10 @@ PrefabInstance:
 --- !u!4 &4084163871873190810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2396ec1bf4d99ec4f896555f426e04b0, type: 3}
+  m_PrefabInstance: {fileID: 4550716013154479217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7948274670996918752 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 2396ec1bf4d99ec4f896555f426e04b0, type: 3}
   m_PrefabInstance: {fileID: 4550716013154479217}
   m_PrefabAsset: {fileID: 0}

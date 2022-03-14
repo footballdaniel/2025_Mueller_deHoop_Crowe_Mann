@@ -13,7 +13,8 @@ namespace VUPenalty
         public TargetArea TargetAreaMissed;
         public TargetArea TargetAreaSuccess;
 
-        [Header("Debug")] public GameObject InterceptSphere;
+        [Header("Debug")] public GameObject PredictionKeeper;
+        public GameObject PredictionAdvertisement;
 
         public TrialSetting ActiveTrial { get; set; }
         public ExperimentalData ExperimentalData { get; set; }

@@ -4,8 +4,6 @@ namespace VUPenalty
 {
     public class WaitForKick : ExperimentState
     {
-        TimeToIntercept1D _timeToIntercept;
-
         public WaitForKick(ExperimentController controller) : base(controller)
         {
         }
@@ -20,6 +18,42 @@ namespace VUPenalty
             _context.Ball.OnKick += OnKicked;
         }
 
+        public override void Tick(float deltaTime)
+        {
+            _timeToIntercept.Tick(deltaTime);
+            var timeToKick = _timeToIntercept.Estimate();
+            var predictionGoalkeeper = _timeToIntercept.Prediction(_context.ActiveTrial.GoalkeeperStartBeforeKick);
+            var predictionAdvertisement =
+                _timeToIntercept.Prediction(_context.ActiveTrial.AdvertisementStartBeforeKick);
+
+            var goalkeeperPrediction = new Vector3(_context.User.Head.transform.position.x, 0,
+                _context.User.Head.transform.position.z + predictionGoalkeeper);
+            var advertisementPrediction = new Vector3(_context.User.Head.transform.position.x, 0,
+                _context.User.Head.transform.position.z + predictionAdvertisement);
+
+
+            if (_context.PredictionKeeper.gameObject != null)
+                _context.PredictionKeeper.transform.position = goalkeeperPrediction;
+
+            if (_context.PredictionAdvertisement.gameObject != null)
+                _context.PredictionAdvertisement.transform.position = advertisementPrediction;
+
+            if ((goalkeeperPrediction.z >= 0) & !_hasGoalkeeperAlreadyDived) _context.Goalkeeper.Dive();
+
+            if ((advertisementPrediction.z >= 0) & !_hasVideoAlreadyStarted) _context.VideoDisplay.Play();
+
+            // Should video already play? Override the prediction if its long
+            if (_context.ActiveTrial.AdvertisementStartBeforeKick >= 3f && ! _hasVideoAlreadyStarted)
+            {
+                _context.VideoDisplay.Play();
+            }
+        }
+
+        public override void Finish()
+        {
+            _context.Ball.OnKick -= OnKicked;
+        }
+    
         void OnKicked(KickStartEvent obj)
         {
             Debug.Log("Has Kicked");
@@ -27,36 +61,7 @@ namespace VUPenalty
             _context.ChangeState(new WaitForBallToLand(_context));
         }
 
-        public override void Tick(float deltaTime)
-        {
-            _timeToIntercept.Tick(deltaTime);
-            var timeToKick = _timeToIntercept.Estimate();
-            
-            if (_context.InterceptSphere.gameObject != null)
-            {
-                var prediction = _timeToIntercept.Prediction(_context.ActiveTrial.GoalkeeperStartBeforeKick);
-                _context.InterceptSphere.transform.position =
-                    new Vector3(_context.User.Head.transform.position.x, 0, _context.User.Head.transform.position.z + prediction);
-            }
-
-            if (timeToKick > 0)
-            {
-                if (timeToKick < _context.ActiveTrial.GoalkeeperStartBeforeKick & !_hasGoalkeeperAlreadyDived)
-                {
-                    _context.Goalkeeper.Dive();
-                }
-
-                if (timeToKick < _context.ActiveTrial.AdvertisementStartBeforeKick & !_hasVideoAlreadyStarted)
-                {
-                    _context.VideoDisplay.Play();
-                }
-            }
-        }
-        
-        public override void Finish()
-        {
-            _context.Ball.OnKick -= OnKicked;
-        }
+        TimeToIntercept1D _timeToIntercept;
 
         bool _hasGoalkeeperAlreadyDived;
         bool _hasVideoAlreadyStarted;
