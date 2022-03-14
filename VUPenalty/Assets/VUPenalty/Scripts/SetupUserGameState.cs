@@ -16,15 +16,15 @@ namespace VUPenalty
 
             _context.UI.OnCalibratePress += OnCalibratePressed;
             
-            
             var userGameObject = Object.Instantiate(_context.UserPrefab);
             _context.ActiveUser = userGameObject.GetComponent<User>();
             _context.ActiveUser.Use(_context.Foot);
-            _context.ActiveUser.Calibrate(_context.Foot);
+
         }
 
         void OnCalibratePressed()
         {
+            _context.ActiveUser.Calibrate(_context.Foot);
             _context.ChangeState(new RunAllTrialsState(_context));
         }
 
@@ -34,6 +34,7 @@ namespace VUPenalty
 
         public override void Finish()
         {
+            _context.UI.OnCalibratePress -= OnCalibratePressed;
         }
     }
 }
