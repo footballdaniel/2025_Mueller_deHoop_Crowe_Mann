@@ -2667,7 +2667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BallPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
-  GoalkeeperPrefab: {fileID: 5462292101878927168, guid: 55b88a8836c59824eb9ae3b87374f3a3, type: 3}
+  GoalkeeperPrefab: {fileID: 5462292101878927168, guid: f79ae1415b7d78f439dea10d0ad82ab8, type: 3}
   DataRecorderPrefab: {fileID: 8813671682206360325, guid: 2e16f14d9f685624bae4158a943057a4, type: 3}
   VideoDisplay: {fileID: 1195997943}
   TargetAreaMissed: {fileID: 1475379260}
