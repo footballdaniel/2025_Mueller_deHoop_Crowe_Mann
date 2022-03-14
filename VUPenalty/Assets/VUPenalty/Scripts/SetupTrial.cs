@@ -12,14 +12,16 @@ namespace VUPenalty
         {
             Debug.Log("Setup trial");
 
-            var dataRecorderGO = GameObject.Instantiate(_context.DataRecorderPrefab);
+            _context.TrialGameObject = new GameObject("Trial Object");
+
+            var dataRecorderGO = GameObject.Instantiate(_context.DataRecorderPrefab, _context.TrialGameObject.transform);
             _context.DataRecorder = dataRecorderGO.GetComponent<DataRecorder>();
             _context.DataRecorder.Target = _context.Foot.transform;
 
-            var ballGo = Object.Instantiate(_context.BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity);
+            var ballGo = Object.Instantiate(_context.BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity, _context.TrialGameObject.transform);
             _context.Ball = ballGo.GetComponent<Ball>();
 
-            var _goalkeeperGO = Object.Instantiate(_context.GoalkeeperPrefab);
+            var _goalkeeperGO = Object.Instantiate(_context.GoalkeeperPrefab, _context.TrialGameObject.transform);
             _context.Goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
             _context.Goalkeeper.JumpDirection = _context.ActiveTrial.JumpDirection;
 

@@ -7,17 +7,14 @@ namespace VUPenalty
 {
     public class Ui : MonoBehaviour
     {
-        public event Action OnCalibratePress;
-        
-        
-        [Header("Dependencies")] 
-        [SerializeField] Button _toggleUi;
+        [Header("Dependencies")] [SerializeField] Button _toggleUi;
         [SerializeField] TMP_Text _savePathString;
         [SerializeField] Button _openExplorer;
         [SerializeField] Button _calibrate;
         [SerializeField] CanvasGroup _UiContent;
-    
+
         string SavePath => Application.persistentDataPath;
+        public event Action OnCalibratePress;
 
         void Awake()
         {
@@ -32,6 +29,11 @@ namespace VUPenalty
             _calibrate.onClick.AddListener(InitiateCalibration);
         }
 
+        void OnDisable()
+        {
+            _openExplorer.onClick.RemoveListener(OpenExplorer);
+        }
+
         void ToggleUi()
         {
             _UiContent.alpha = _UiContent.alpha == 0 ? 1 : 0;
@@ -44,13 +46,8 @@ namespace VUPenalty
 
         void InitiateCalibration()
         {
+            _calibrate.interactable = false;
             OnCalibratePress?.Invoke();
         }
-
-        void OnDisable()
-        {
-            _openExplorer.onClick.RemoveListener(OpenExplorer);
-        }
-        
     }
 }

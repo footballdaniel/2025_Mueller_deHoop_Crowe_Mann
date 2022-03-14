@@ -1,4 +1,6 @@
 ﻿using System;
+using UnityEditor;
+using UnityEngine;
 
 namespace VUPenalty
 {
@@ -10,8 +12,13 @@ namespace VUPenalty
 
         public override void Init()
         {
-            
+            WipeGameObjects();
             _context.ReadyForNextTrial();
+        }
+
+        void WipeGameObjects()
+        {
+            GameObject.Destroy(_context.TrialGameObject);
         }
 
 

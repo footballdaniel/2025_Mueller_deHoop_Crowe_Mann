@@ -14,7 +14,6 @@ namespace VUPenalty
         public TargetArea TargetAreaSuccess;
 
         [Header("Debug")] public GameObject InterceptSphere;
-        public event Action OnReadyForNextTrial;
 
         public TrialSetting ActiveTrial { get; set; }
         public ExperimentalData ExperimentalData { get; set; }
@@ -23,8 +22,8 @@ namespace VUPenalty
         public Goalkeeper Goalkeeper { get; set; }
         public DataRecorder DataRecorder { get; set; }
         public Foot Foot { get; set; }
-
-        ExperimentState _currentState;
+        public GameObject TrialGameObject { get; set; }
+        public event Action OnReadyForNextTrial;
 
         public void ChangeState(ExperimentState newState)
         {
@@ -33,14 +32,16 @@ namespace VUPenalty
             _currentState.Init();
         }
 
+        public void ReadyForNextTrial()
+        {
+            OnReadyForNextTrial?.Invoke();
+        }
+
         void Update()
         {
             _currentState?.Tick(Time.deltaTime);
         }
 
-        public void ReadyForNextTrial()
-        {
-            OnReadyForNextTrial?.Invoke();
-        }
+        ExperimentState _currentState;
     }
 }
