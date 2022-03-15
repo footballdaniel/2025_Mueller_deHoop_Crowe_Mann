@@ -40,7 +40,8 @@ namespace VUPenalty
 
             if ((goalkeeperPrediction.z >= 0) & !_hasGoalkeeperAlreadyDived) _context.Goalkeeper.Dive();
 
-            if ((advertisementPrediction.z >= 0) & !_hasVideoAlreadyStarted) _context.VideoDisplay.Play();
+            if ((advertisementPrediction.z >= 0) & !_hasVideoAlreadyStarted) 
+                _context.VideoDisplay.Play();
 
             // Should video already play? Override the prediction if its long
             if (_context.ActiveTrial.AdvertisementStartBeforeKick >= 3f && ! _hasVideoAlreadyStarted)

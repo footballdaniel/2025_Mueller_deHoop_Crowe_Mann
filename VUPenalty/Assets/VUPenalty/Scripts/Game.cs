@@ -7,8 +7,8 @@ namespace VUPenalty
         [Header("Prefabs")] public GameObject UserPrefab;
 
         [Header("Dependencies")] 
-        public Ui UI;
         public GameObject Experiment;
+        public Ui UI;
         public Foot Foot;
         
         public User ActiveUser { get; set; }

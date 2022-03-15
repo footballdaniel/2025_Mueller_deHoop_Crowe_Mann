@@ -86,7 +86,7 @@ namespace VUPenalty
     public class Point3D
     {
         public static implicit operator Point3D(Vector3 input) =>
-            new()
+            new Point3D()
             {
                 X = input.x,
                 Y = input.y,
