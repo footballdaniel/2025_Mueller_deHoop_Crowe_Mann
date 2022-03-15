@@ -2731,7 +2731,7 @@ GameObject:
   - component: {fileID: 1939875343}
   - component: {fileID: 1939875344}
   m_Layer: 0
-  m_Name: Anniek_Lars
+  m_Name: Experiment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2770,8 +2770,8 @@ MonoBehaviour:
   VideoDisplay: {fileID: 1195997943}
   TargetAreaMissed: {fileID: 1475379260}
   TargetAreaSuccess: {fileID: 782919181}
-  PredictionKeeper: {fileID: 1241988279}
-  PredictionAdvertisement: {fileID: 964506044}
+  PredictionKeeper: {fileID: 0}
+  PredictionAdvertisement: {fileID: 0}
 --- !u!114 &1939875344
 MonoBehaviour:
   m_ObjectHideFlags: 0
