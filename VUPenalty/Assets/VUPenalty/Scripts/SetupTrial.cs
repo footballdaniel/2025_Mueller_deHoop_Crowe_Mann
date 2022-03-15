@@ -20,6 +20,7 @@ namespace VUPenalty
 
             var ballGo = Object.Instantiate(_context.BallPrefab, new Vector3(0f, 0.15f, 0f), Quaternion.identity, _context.TrialGameObject.transform);
             _context.Ball = ballGo.GetComponent<Ball>();
+            _context.Ball.ElasticityMultiplier = _context.ExperimentalData.BallElasticity;
 
             var _goalkeeperGO = Object.Instantiate(_context.GoalkeeperPrefab, _context.TrialGameObject.transform);
             _context.Goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();

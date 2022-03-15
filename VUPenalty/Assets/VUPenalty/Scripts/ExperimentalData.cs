@@ -11,6 +11,7 @@ namespace VUPenalty
         public string ResearchInstitution = "VU";
         [Range(1f, 10f)] public float VideoHeight = 1f;
         [Range(1f, 20f)] public float VideoWidth = 10f;
+        [Range(0f, 5f)] public float BallElasticity = 2f;
         public List<TrialSetting> TrialSettings;
     }
 

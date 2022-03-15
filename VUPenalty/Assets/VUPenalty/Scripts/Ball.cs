@@ -8,6 +8,8 @@ namespace VUPenalty
     {
         public event Action<KickStartEvent> OnKick;
 
+        [Range(0f, 5f)] public float ElasticityMultiplier = 1f;
+
 
         void OnTriggerEnter(Collider other)
         {
@@ -55,7 +57,7 @@ namespace VUPenalty
             var kickTime = Time.time - _startTime;
             var velocityMeterPerSecond = kickDirection / kickTime;
             var velocity = velocityMeterPerSecond;
-            rb.velocity = velocity * 4f;
+            rb.velocity = velocity * ElasticityMultiplier;
 
 
             var kickData = new KickStartEvent()
