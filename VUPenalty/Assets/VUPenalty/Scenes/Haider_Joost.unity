@@ -2750,17 +2750,17 @@ MonoBehaviour:
   ResearchInstitution: VU
   VideoHeight: 4.99
   VideoWidth: 12.89
-  BallElasticity: 1
+  BallElasticity: 0.1
   TrialSettings:
-  - Video: {fileID: 32900000, guid: 9db4b968af579fa4f96e76c376fdd88d, type: 3}
+  - Video: {fileID: 32900000, guid: 8301a60e78bdfd44abaf06b871f1b137, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 0
     JumpDirection: 0
-  - Video: {fileID: 32900000, guid: 84233814559ed49448dab23c3b0fb75e, type: 3}
+  - Video: {fileID: 32900000, guid: 9f2a8e38d511f9a44a0d4cf7ac3c2391, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 1
     JumpDirection: 0
-  - Video: {fileID: 32900000, guid: b8b8e6631d1d0f84bbfad55ecc2bcca1, type: 3}
+  - Video: {fileID: 32900000, guid: 76aa6b751908e0d4db2c7202eb8d9fba, type: 3}
     GoalkeeperStartBeforeKick: 0.977
     AdvertisementStartBeforeKick: 0.8
     JumpDirection: 0
