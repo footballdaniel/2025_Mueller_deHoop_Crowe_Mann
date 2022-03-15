@@ -5,7 +5,6 @@ namespace VUPenalty
 {
     public class VideoDisplay : MonoBehaviour
     {
-        [SerializeField] VideoClip _video;
         [SerializeField] VideoPlayer _videoPlayer;
 
         public void SetSize(float width, float height)
@@ -15,7 +14,7 @@ namespace VUPenalty
 
         public void LoadVideo(VideoClip video)
         {
-            _videoPlayer.GetComponent<Renderer>().enabled = false;
+            // _videoPlayer.GetComponent<Renderer>().enabled = false;
             _videoPlayer.clip = video;
             // _videoPlayer.Play();
             // _videoPlayer.Pause();

@@ -2013,7 +2013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdb1dd5fd28f3f4d9a419a9caa713ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _video: {fileID: 0}
   _videoPlayer: {fileID: 1217047409}
 --- !u!1 &1214186152
 GameObject:
@@ -2179,7 +2178,7 @@ VideoPlayer:
   m_TargetTexture: {fileID: 8400000, guid: eee90f8b494724c4b9bfbfca20041ab3, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
+  m_TargetMaterialProperty: _MainTex
   m_RenderMode: 3
   m_AspectRatio: 2
   m_DataSource: 0
@@ -2749,16 +2748,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticipantName: FirstName_LastName
   ResearchInstitution: VU
-  VideoHeight: 2.75
-  VideoWidth: 15
+  VideoHeight: 4.99
+  VideoWidth: 12.89
   TrialSettings:
-  - Video: {fileID: 32900000, guid: 51740beefd249fb4fac526912cd5edff, type: 3}
-    GoalkeeperStartBeforeKick: 0.977
-    AdvertisementStartBeforeKick: 3.85
+  - Video: {fileID: 32900000, guid: 9db4b968af579fa4f96e76c376fdd88d, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 2.77
     JumpDirection: 0
   - Video: {fileID: 32900000, guid: 84233814559ed49448dab23c3b0fb75e, type: 3}
-    GoalkeeperStartBeforeKick: 0.977
-    AdvertisementStartBeforeKick: 0.8
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 1
     JumpDirection: 0
   - Video: {fileID: 32900000, guid: b8b8e6631d1d0f84bbfad55ecc2bcca1, type: 3}
     GoalkeeperStartBeforeKick: 0.977
