@@ -52,6 +52,8 @@ namespace VUPenalty
 
         public override void Finish()
         {
+            _context.VideoDisplay.Play(); // If not already started
+            _context.Goalkeeper.Dive(); // If not already started
             _context.Ball.OnKick -= OnKicked;
         }
     

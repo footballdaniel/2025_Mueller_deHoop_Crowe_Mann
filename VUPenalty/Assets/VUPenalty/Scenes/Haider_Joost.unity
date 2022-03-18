@@ -2632,7 +2632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1787549933
 Transform:
   m_ObjectHideFlags: 0
@@ -2753,77 +2753,49 @@ MonoBehaviour:
   BallElasticity: 2.12
   TrialSettings:
   - Video: {fileID: 32900000, guid: 4a4a2f1b0149a5d41b95ad73b380a410, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.868
+    AdvertisementStartBeforeKick: 10
+    JumpDirection: 0
+  - Video: {fileID: 32900000, guid: 46070fcff81190d4aa902517bbe199dd, type: 3}
+    GoalkeeperStartBeforeKick: 0.308
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
-  - Video: {fileID: 32900000, guid: 46070fcff81190d4aa902517bbe199dd, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
   - Video: {fileID: 32900000, guid: 3621ff8178a85a946955bab75a9f3f06, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.279
     AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
+    JumpDirection: 1
   - Video: {fileID: 32900000, guid: 4a4a2f1b0149a5d41b95ad73b380a410, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
-  - Video: {fileID: 32900000, guid: 011f26163588b8a488d113cef376be29, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
-  - Video: {fileID: 32900000, guid: a0021db47ddc36e4e836854c7010659b, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
-  - Video: {fileID: 32900000, guid: 869b557e112f263479a0445413a2f51c, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
-  - Video: {fileID: 32900000, guid: 514a628e3f5314e4dad52e6559263f84, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
-  - Video: {fileID: 32900000, guid: 22179a83eb72a71498c0db1fb548a831, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
-  - Video: {fileID: 32900000, guid: f37236ce6c2c1d94ea7a64496797eb63, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
-  - Video: {fileID: 32900000, guid: 6183840c452110940944356cc7c9380b, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.303
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
   - Video: {fileID: 32900000, guid: 104d1228d7c7315438e60c2d1cc360f4, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.1
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
   - Video: {fileID: 32900000, guid: 3e62b286d925178419b8d781268e747f, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.1
     AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
+    JumpDirection: 1
   - Video: {fileID: 32900000, guid: 02fd1998b6a1d514f99bedbb74f08145, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.1
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
   - Video: {fileID: 32900000, guid: 2851ba6ca02e0ca4aa5fa3bdd0e3f146, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.1
     AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
+    JumpDirection: 1
   - Video: {fileID: 32900000, guid: 0318ac1f28623344e9a31b6099cfb825, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.1
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
   - Video: {fileID: 32900000, guid: f65155689d23d184596b449ce52bab24, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.1
     AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
+    JumpDirection: 1
   - Video: {fileID: 32900000, guid: 3ea37e2763dfa5542be26bc67923d7ec, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 0.1
     AdvertisementStartBeforeKick: 10
-    JumpDirection: 0
+    JumpDirection: 1
 --- !u!1 &2067183458
 GameObject:
   m_ObjectHideFlags: 0
