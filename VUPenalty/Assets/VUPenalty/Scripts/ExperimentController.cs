@@ -8,6 +8,7 @@ namespace VUPenalty
         [Header("Prefabs")] public GameObject BallPrefab;
         public GameObject GoalkeeperPrefab;
         public GameObject DataRecorderPrefab;
+        public GameObject StartAreaPrefab;
 
         [Header("Dependencies")] public VideoDisplay VideoDisplay;
         public TargetArea TargetAreaMissed;

@@ -1915,6 +1915,7 @@ Transform:
   - {fileID: 782919179}
   - {fileID: 1475379259}
   - {fileID: 1014930249}
+  - {fileID: 1939875342}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2707,12 +2708,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939875341}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1040984989}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1939875343
 MonoBehaviour:
@@ -2729,6 +2730,7 @@ MonoBehaviour:
   BallPrefab: {fileID: 1975457108487340, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
   GoalkeeperPrefab: {fileID: 5462292101878927168, guid: f79ae1415b7d78f439dea10d0ad82ab8, type: 3}
   DataRecorderPrefab: {fileID: 8813671682206360325, guid: 2e16f14d9f685624bae4158a943057a4, type: 3}
+  StartAreaPrefab: {fileID: 6332836762961117351, guid: 0603560efc73f7f4ab6cf44da953dc7d, type: 3}
   VideoDisplay: {fileID: 1195997943}
   TargetAreaMissed: {fileID: 1475379260}
   TargetAreaSuccess: {fileID: 782919181}
@@ -2930,6 +2932,7 @@ GameObject:
   - component: {fileID: 2981773129840000141}
   - component: {fileID: 7141516349849675206}
   - component: {fileID: 7141516349849675207}
+  - component: {fileID: 888543306992157286}
   m_Layer: 0
   m_Name: Box01
   m_TagString: Untagged
@@ -2937,6 +2940,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &888543306992157286
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888543306992157285}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &2981773129840000141
 MeshRenderer:
   m_ObjectHideFlags: 0
