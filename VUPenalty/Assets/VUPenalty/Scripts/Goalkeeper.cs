@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace VUPenalty
@@ -6,12 +7,19 @@ namespace VUPenalty
     {
         public JumpDirection JumpDirection;
         [SerializeField] Animator _animator;
+        [SerializeField] List<SkinnedMeshRenderer> _bodyMaterial;
 
         [ContextMenu("Dive Right")]
         void DiveRight()
         {
             JumpDirection = JumpDirection.Right;
             Dive();
+        }
+
+        public void SetGoalkeeperColor(Texture texture)
+        {
+            foreach (var skinnedRenderer in _bodyMaterial)
+                skinnedRenderer.material.mainTexture = texture;   
         }
 
         public void Dive()

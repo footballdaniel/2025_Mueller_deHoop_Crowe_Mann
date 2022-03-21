@@ -28,6 +28,8 @@ namespace VUPenalty
 
             _context.VideoDisplay.LoadVideo(_context.ActiveTrial.Video);
             _context.VideoDisplay.SetSize(_context.ExperimentalData.VideoWidth, _context.ExperimentalData.VideoHeight);
+            
+            _context.Goalkeeper.SetGoalkeeperColor(_context.ActiveTrial.GoalKeeperColor);
 
             _context.ChangeState(new WaitForGetInPosition(_context));
         }

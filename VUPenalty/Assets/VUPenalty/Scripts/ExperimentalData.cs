@@ -29,6 +29,7 @@ namespace VUPenalty
         [Range(0f, 1f)] public float GoalkeeperStartBeforeKick;
         [Range(0f, 10f)] public float AdvertisementStartBeforeKick;
         public JumpDirection JumpDirection;
+        public Texture GoalKeeperColor;
     }
 
     [Serializable]

@@ -6,16 +6,17 @@ namespace VUPenalty
 {
     public class Ball : MonoBehaviour
     {
-        public event Action<KickStartEvent> OnKick;
-
         [Range(0f, 5f)] public float ElasticityMultiplier = 1f;
+        public bool IsReadyForKick;
+        public event Action<KickStartEvent> OnKick;
 
 
         void OnTriggerEnter(Collider other)
         {
             if (_isCoolDown) return;
+            if (!IsReadyForKick) return;
             if (!IsA<FootModel>(other.gameObject)) return;
-            
+
             _footIsKickingBall = true;
             _startTime = Time.time;
             print("Foot kick detected");
@@ -24,6 +25,7 @@ namespace VUPenalty
 
         void OnTriggerExit(Collider other)
         {
+            if (!IsReadyForKick) return;
             if (_footIsKickingBall & !_isCoolDown)
             {
                 _endPosition = other.transform.position;
@@ -75,28 +77,5 @@ namespace VUPenalty
         Vector3 _startPosition;
         float _startTime;
         bool _footIsKickingBall;
-    }
-
-    [Serializable]
-    public class KickStartEvent
-    {
-        public Point3D Origin;
-        public Point3D VelocityVector;
-    }
-
-    [Serializable]
-    public class Point3D
-    {
-        public static implicit operator Point3D(Vector3 input) =>
-            new Point3D()
-            {
-                X = input.x,
-                Y = input.y,
-                Z = input.z
-            };
-
-        public float X;
-        public float Y;
-        public float Z;
     }
 }

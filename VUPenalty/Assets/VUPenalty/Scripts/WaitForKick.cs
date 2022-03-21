@@ -43,7 +43,8 @@ namespace VUPenalty
             _timeToIntercept = new TimeToIntercept1D();
             _timeToIntercept.From(_context.User.Head);
             _timeToIntercept.To(_context.Ball.transform);
-
+            
+            _context.Ball.IsReadyForKick = true;
             _context.Ball.OnKick += OnKicked;
         }
 
@@ -89,6 +90,7 @@ namespace VUPenalty
         void OnKicked(KickStartEvent obj)
         {
             Debug.Log("Has Kicked");
+            _context.Ball.IsReadyForKick = false;
             _context.DataRecorder.KickStart = obj;
             _context.ChangeState(new WaitForBallToLand(_context));
         }
