@@ -3203,7 +3203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1787549933
 Transform:
   m_ObjectHideFlags: 0
@@ -3324,68 +3324,68 @@ MonoBehaviour:
   VideoWidth: 7.3
   BallElasticity: 2.12
   TrialSettings:
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
+  - Video: {fileID: 32900000, guid: 77058d4c34260d44bbf162d3464ae6ca, type: 3}
+    GoalkeeperStartBeforeKick: 1
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 22e8faaebf8712241a1db69e4343a849, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
+  - Video: {fileID: 32900000, guid: 9f6343873dec4fb40b71763bb38d9724, type: 3}
+    GoalkeeperStartBeforeKick: 0.8
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
-    GoalKeeperColor: {fileID: 0}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 22e8faaebf8712241a1db69e4343a849, type: 3}
+  - Video: {fileID: 32900000, guid: 7ce24d13cce397a4793496168fe55cce, type: 3}
+    GoalkeeperStartBeforeKick: 0.155
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
     GoalKeeperColor: {fileID: 0}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0.5
+  - Video: {fileID: 32900000, guid: 3292d47e3d9f70e449028c4fdd0138d6, type: 3}
+    GoalkeeperStartBeforeKick: 0.2
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 22e8faaebf8712241a1db69e4343a849, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 1
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
-    GoalKeeperColor: {fileID: 0}
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
+    GoalkeeperStartBeforeKick: 1
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
-    GoalKeeperColor: {fileID: 0}
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0.5
+    GoalkeeperStartBeforeKick: 0.133
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 7db617ea0cea8104dbd7ab13c11ea0ca, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
+  - Video: {fileID: 32900000, guid: 7ce24d13cce397a4793496168fe55cce, type: 3}
+    GoalkeeperStartBeforeKick: 0.309
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
     GoalKeeperColor: {fileID: 0}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
+  - Video: {fileID: 32900000, guid: 3292d47e3d9f70e449028c4fdd0138d6, type: 3}
+    GoalkeeperStartBeforeKick: 0.322
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
-    GoalKeeperColor: {fileID: 0}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3292d47e3d9f70e449028c4fdd0138d6, type: 3}
+    GoalkeeperStartBeforeKick: 0.516
     AdvertisementStartBeforeKick: 10
     JumpDirection: 1
-    GoalKeeperColor: {fileID: 0}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalKeeperColor: {fileID: 2800000, guid: 22e8faaebf8712241a1db69e4343a849, type: 3}
+  - Video: {fileID: 32900000, guid: 9e9de64934fb8e148b8c994f3a9ebdee, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
-    GoalKeeperColor: {fileID: 0}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 22e8faaebf8712241a1db69e4343a849, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0.38
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
-    GoalKeeperColor: {fileID: 0}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0.5
+    GoalKeeperColor: {fileID: 2800000, guid: 22e8faaebf8712241a1db69e4343a849, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0.162
     AdvertisementStartBeforeKick: 10
     JumpDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 7db617ea0cea8104dbd7ab13c11ea0ca, type: 3}
