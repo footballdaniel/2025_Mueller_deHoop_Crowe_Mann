@@ -25,6 +25,7 @@ namespace VUPenalty
         public DataRecorder DataRecorder { get; set; }
         public Foot Foot { get; set; }
         public GameObject TrialGameObject { get; set; }
+        public int TrialNumber => _trialNumber;
         public event Action OnReadyForNextTrial;
 
         public void ChangeState(ExperimentState newState)
@@ -39,11 +40,17 @@ namespace VUPenalty
             OnReadyForNextTrial?.Invoke();
         }
 
+        public void SetTrialNumber(int current)
+        {
+            _trialNumber = current;
+        }
+
         void Update()
         {
             _currentState?.Tick(Time.deltaTime);
         }
 
         ExperimentState _currentState;
+        int _trialNumber;
     }
 }

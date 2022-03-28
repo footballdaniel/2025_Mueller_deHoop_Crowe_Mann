@@ -41,6 +41,7 @@ namespace VUPenalty
             {
                 Debug.Log($"Loading Trial number {_Current}");
                 _experimentController.ActiveTrial = _experimentalData.TrialSettings[_Current];
+                _experimentController.SetTrialNumber(_Current);
                 _experimentController.ChangeState(new SetupTrial(_experimentController));
             }
             else

@@ -11,7 +11,7 @@ namespace VUPenalty
         
         void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<VUPenalty.Ball>(out var ball))
+            if (other.TryGetComponent<Ball>(out var ball))
                 OnHit?.Invoke(new KickEndEvent()
                 {
                     EndLocation = ball.transform.position,

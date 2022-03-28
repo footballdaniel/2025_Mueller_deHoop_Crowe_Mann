@@ -14,12 +14,15 @@ namespace VUPenalty
 
         public void LoadVideo(VideoClip video)
         {
-            // _videoPlayer.GetComponent<Renderer>().enabled = false;
-            _videoPlayer.clip = null;
+            ResetVideo();
             _videoPlayer.clip = video;
-            // _videoPlayer.Play();
-            // _videoPlayer.Pause();
+
             
+        }
+
+        void ResetVideo()
+        {
+            _videoPlayer.clip = null;
         }
 
         public void Play()

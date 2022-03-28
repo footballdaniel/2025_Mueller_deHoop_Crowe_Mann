@@ -43,23 +43,24 @@ namespace VUPenalty
 
         TrialData GetLastTrial()
         {
+            var videoName = _context.ActiveTrial.Video == null ? "Null" : _context.ActiveTrial.Video.name;
+            
             var trial = new TrialData()
             {
-                ParticipantName = _context.ExperimentalData.ParticipantName,
                 ResearchInstitution = _context.ExperimentalData.ResearchInstitution,
+                ParticipantName = _context.ExperimentalData.ParticipantName,
+                TrialNumber = _context.TrialNumber,
                 DateTime = DateTime.Now.ToString("yyyy_M_dd_HH_mm_ss"),
-                Events = new EventData()
-                {
-                    End = _context.DataRecorder.KickEnd,
-                    Start = _context.DataRecorder.KickStart
-                },
-                Tracking = new TrackingData()
-                {
-                    Foot = _context.DataRecorder.TimeSeries
-                },
-                JumpDirection = _context.ActiveTrial.JumpDirection
+                VideoName = videoName,
+                VideoHeight = _context.ExperimentalData.VideoHeight,
+                VideoWidth = _context.ExperimentalData.VideoWidth,
+                GoalkeeperStartBeforeKick = _context.ActiveTrial.GoalkeeperStartBeforeKick,
+                AdvertisementStartBeforeKick = _context.ActiveTrial.AdvertisementStartBeforeKick,
+                BallElasticity = _context.ExperimentalData.BallElasticity,
+                JumpDirection = Enum.GetName(typeof(JumpDirection), _context.ActiveTrial.JumpDirection),
+                Events = new EventData(_context.DataRecorder.KickEnd, _context.DataRecorder.KickStart, _context.DataRecorder.GetDiveData()),
+                Tracking = new TrackingData(_context.DataRecorder.TimeSeries)
             };
-
             return trial;
         }
     }

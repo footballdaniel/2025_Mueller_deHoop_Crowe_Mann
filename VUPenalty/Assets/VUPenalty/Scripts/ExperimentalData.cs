@@ -21,7 +21,7 @@ namespace VUPenalty
         Left,
         Right
     }
-    
+
     [Serializable]
     public class TrialSetting
     {
@@ -37,39 +37,69 @@ namespace VUPenalty
     {
         public string ResearchInstitution;
         public string ParticipantName;
+        public int TrialNumber;
         public string DateTime;
         public string VideoName;
         public float VideoHeight;
         public float VideoWidth;
-        public float GoalkeeperStart;
-        public float AdvertisementStart;
-        public string BallElasticity;
+        public float GoalkeeperStartBeforeKick;
+        public float AdvertisementStartBeforeKick;
+        public float BallElasticity;
+        public string JumpDirection;
         public EventData Events;
         public TrackingData Tracking;
-        public JumpDirection JumpDirection;
     }
 
     [Serializable]
     public class TrackingData
     {
         public List<Point3D> Foot;
+
+        public TrackingData(List<Point3D> foot)
+        {
+            Foot = foot;
+        }
     }
 
     [Serializable]
     public class EventData
     {
+        public EventData(KickEndEvent end, KickStartEvent start, KeeperDiveData dive)
+        {
+            End = end;
+            Start = start;
+            Dive = dive;
+        }
+
         public KickStartEvent Start;
         public KickEndEvent End;
-        public KeeperDiveEvent Dive;
+        public KeeperDiveData Dive;
     }
 
-    // New class.... Add constructors to other classes as well and make into records.
-    [Serializable]
+    
     public class KeeperDiveEvent
     {
-        float Time;
+        public KeeperDiveEvent(JumpDirection jumpDirection)
+        {
+            JumpDirection = jumpDirection;
+        }
+        
+        public JumpDirection JumpDirection;
     }
-    
+
+    [Serializable]
+    public class KeeperDiveData
+    {
+        public KeeperDiveData(float secondsBeforeKick, JumpDirection direction)
+        {
+            SecondsBeforeKick = secondsBeforeKick;
+            JumpDirection = direction;
+        }
+        
+        public JumpDirection JumpDirection;
+        public float SecondsBeforeKick;
+    }
+
     [Serializable]
     public class KickEndEvent
     {

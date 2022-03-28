@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,21 +10,19 @@ namespace VUPenalty
         [SerializeField] Animator _animator;
         [SerializeField] List<SkinnedMeshRenderer> _bodyMaterial;
 
-        [ContextMenu("Dive Right")]
-        void DiveRight()
-        {
-            JumpDirection = JumpDirection.Right;
-            Dive();
-        }
+        public event Action<KeeperDiveEvent> OnKeeperDive;
 
         public void SetGoalkeeperColor(Texture texture)
         {
             foreach (var skinnedRenderer in _bodyMaterial)
-                skinnedRenderer.material.mainTexture = texture;   
+                skinnedRenderer.material.mainTexture = texture;
         }
 
         public void Dive()
         {
+            var keeperDiveEvent = new KeeperDiveEvent(JumpDirection);
+            
+            OnKeeperDive?.Invoke(keeperDiveEvent);
             switch (JumpDirection)
             {
                 case JumpDirection.Left:
