@@ -10,7 +10,6 @@ namespace VUPenalty
 
         void OnTriggerStay(Collider other)
         {
-            Debug.Log("YES");
             if (IsA<FootModel>(other.gameObject))
                 IsObserverInStartArea = true;
         }

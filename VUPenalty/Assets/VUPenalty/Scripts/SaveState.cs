@@ -1,19 +1,38 @@
 ﻿using System;
-using UnityEditor;
+using System.IO;
 using UnityEngine;
 
 namespace VUPenalty
 {
-    class SaveData : ExperimentState
+    class SaveState : ExperimentState
     {
-        public SaveData(ExperimentController controller) : base(controller)
+        public SaveState(ExperimentController controller) : base(controller)
         {
         }
 
         public override void Init()
         {
+            SaveData(GetLastTrial());
             WipeGameObjects();
             _context.ReadyForNextTrial();
+        }
+
+        public override void Tick(float deltaTime)
+        {
+        }
+
+        public override void Finish()
+        {
+        }
+
+        void SaveData(TrialData data)
+        {
+            var json = JsonUtility.ToJson(data, true);
+            var folderPath = Application.persistentDataPath;
+            var dateTime = DateTime.Now.ToString("yyyy_M_dd_HH_mm_ss");
+            var filePath = Path.Combine(folderPath, $"Trial_{dateTime}.json");
+            File.WriteAllText(filePath, json);
+            Debug.Log($"Data saved to: {folderPath}");
         }
 
         void WipeGameObjects()
@@ -22,7 +41,7 @@ namespace VUPenalty
         }
 
 
-        TrialData GetTrialData()
+        TrialData GetLastTrial()
         {
             var trial = new TrialData()
             {
@@ -42,14 +61,6 @@ namespace VUPenalty
             };
 
             return trial;
-        }
-
-        public override void Tick(float deltaTime)
-        {
-        }
-
-        public override void Finish()
-        {
         }
     }
 }

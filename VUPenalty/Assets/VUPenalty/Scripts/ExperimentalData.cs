@@ -38,6 +38,12 @@ namespace VUPenalty
         public string ResearchInstitution;
         public string ParticipantName;
         public string DateTime;
+        public string VideoName;
+        public float VideoHeight;
+        public float VideoWidth;
+        public float GoalkeeperStart;
+        public float AdvertisementStart;
+        public string BallElasticity;
         public EventData Events;
         public TrackingData Tracking;
         public JumpDirection JumpDirection;
@@ -54,8 +60,16 @@ namespace VUPenalty
     {
         public KickStartEvent Start;
         public KickEndEvent End;
+        public KeeperDiveEvent Dive;
     }
 
+    // New class.... Add constructors to other classes as well and make into records.
+    [Serializable]
+    public class KeeperDiveEvent
+    {
+        float Time;
+    }
+    
     [Serializable]
     public class KickEndEvent
     {

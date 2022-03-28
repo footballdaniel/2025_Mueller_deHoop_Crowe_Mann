@@ -12,7 +12,7 @@ namespace VUPenalty
         IEnumerator Delay(float duration)
         {
             yield return new WaitForSeconds(duration);
-            _context.ChangeState(new SaveData(_context));
+            _context.ChangeState(new SaveState(_context));
         }
 
         public override void Init()
