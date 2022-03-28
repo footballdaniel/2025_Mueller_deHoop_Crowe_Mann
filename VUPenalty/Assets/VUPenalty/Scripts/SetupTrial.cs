@@ -25,7 +25,7 @@ namespace VUPenalty
             var _goalkeeperGO = Object.Instantiate(_context.GoalkeeperPrefab, _context.TrialGameObject.transform);
             _context.Goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
             _context.Goalkeeper.JumpDirection = _context.ActiveTrial.JumpDirection;
-
+            
             _context.VideoDisplay.LoadVideo(_context.ActiveTrial.Video);
             _context.VideoDisplay.SetSize(_context.ExperimentalData.VideoWidth, _context.ExperimentalData.VideoHeight);
             
