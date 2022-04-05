@@ -3318,7 +3318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcac2fe3a4454702bca34efb008dc46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParticipantName: FirstName_LastName
+  ParticipantName: David Mann
   ResearchInstitution: VU
   VideoHeight: 1
   VideoWidth: 7.3
