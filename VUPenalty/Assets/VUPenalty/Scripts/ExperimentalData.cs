@@ -19,7 +19,8 @@ namespace VUPenalty
     public enum Direction
     {
         Left,
-        Right
+        Right,
+        None
     }
 
     [Serializable]
