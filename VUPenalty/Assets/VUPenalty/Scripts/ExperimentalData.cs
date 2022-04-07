@@ -16,7 +16,7 @@ namespace VUPenalty
     }
 
     [Serializable]
-    public enum JumpDirection
+    public enum Direction
     {
         Left,
         Right
@@ -28,8 +28,10 @@ namespace VUPenalty
         public VideoClip Video;
         [Range(0f, 1f)] public float GoalkeeperStartBeforeKick;
         [Range(0f, 10f)] public float AdvertisementStartBeforeKick;
-        public JumpDirection JumpDirection;
+        public Direction JumpDirection;
+        public Direction AdvertisementDirection;
         public Texture GoalKeeperColor;
+        [Range(-3.66f, 3.66f)] public float GoalKeeperDisplacement;
     }
 
     [Serializable]
@@ -79,24 +81,24 @@ namespace VUPenalty
     
     public class KeeperDiveEvent
     {
-        public KeeperDiveEvent(JumpDirection jumpDirection)
+        public KeeperDiveEvent(Direction direction)
         {
-            JumpDirection = jumpDirection;
+            Direction = direction;
         }
         
-        public JumpDirection JumpDirection;
+        public Direction Direction;
     }
 
     [Serializable]
     public class KeeperDiveData
     {
-        public KeeperDiveData(float secondsBeforeKick, JumpDirection direction)
+        public KeeperDiveData(float secondsBeforeKick, Direction direction)
         {
             SecondsBeforeKick = secondsBeforeKick;
-            JumpDirection = direction;
+            _direction = direction;
         }
         
-        public JumpDirection JumpDirection;
+        public Direction _direction;
         public float SecondsBeforeKick;
     }
 

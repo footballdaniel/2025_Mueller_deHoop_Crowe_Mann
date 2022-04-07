@@ -6,7 +6,7 @@ namespace VUPenalty
 {
     public class Goalkeeper : MonoBehaviour
     {
-        public JumpDirection JumpDirection;
+        public Direction _direction;
         [SerializeField] Animator _animator;
         [SerializeField] List<SkinnedMeshRenderer> _bodyMaterial;
 
@@ -20,19 +20,19 @@ namespace VUPenalty
 
         public void Dive()
         {
-            var keeperDiveEvent = new KeeperDiveEvent(JumpDirection);
+            var keeperDiveEvent = new KeeperDiveEvent(_direction);
             
             OnKeeperDive?.Invoke(keeperDiveEvent);
-            switch (JumpDirection)
+            switch (_direction)
             {
-                case JumpDirection.Left:
+                case Direction.Left:
                     _animator.SetTrigger("DiveLeft");
                     break;
-                case JumpDirection.Right:
+                case Direction.Right:
                     _animator.SetTrigger("DiveRight");
                     break;
                 default:
-                    Debug.LogWarning($"Jump direction {JumpDirection} not implemented");
+                    Debug.LogWarning($"Jump direction {_direction} not implemented");
                     break;
             }
         }

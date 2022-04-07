@@ -13,7 +13,7 @@ namespace VUPenalty
                 Debug.LogError("Could not export dive data, kick has not occured");
 
             var keeperDivedBeforeBallKickInSeconds = Time.timeSinceLevelLoad - _currentTimeAtDive;
-            return new KeeperDiveData(keeperDivedBeforeBallKickInSeconds, _dive.JumpDirection);
+            return new KeeperDiveData(keeperDivedBeforeBallKickInSeconds, _dive.Direction);
         }
 
         public KickEndEvent KickEnd;
