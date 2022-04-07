@@ -28,10 +28,10 @@ namespace VUPenalty
         public VideoClip Video;
         [Range(0f, 1f)] public float GoalkeeperStartBeforeKick;
         [Range(0f, 10f)] public float AdvertisementStartBeforeKick;
+        [Range(-3.66f, 3.66f)] public float GoalKeeperDisplacement;
         public Direction JumpDirection;
         public Direction AdvertisementDirection;
         public Texture GoalKeeperColor;
-        [Range(-3.66f, 3.66f)] public float GoalKeeperDisplacement;
     }
 
     [Serializable]
@@ -48,6 +48,7 @@ namespace VUPenalty
         public float AdvertisementStartBeforeKick;
         public float BallElasticity;
         public string JumpDirection;
+        public string AdvertisementDirection;
         public EventData Events;
         public TrackingData Tracking;
     }
@@ -92,13 +93,11 @@ namespace VUPenalty
     [Serializable]
     public class KeeperDiveData
     {
-        public KeeperDiveData(float secondsBeforeKick, Direction direction)
+        public KeeperDiveData(float secondsBeforeKick)
         {
             SecondsBeforeKick = secondsBeforeKick;
-            _direction = direction;
         }
         
-        public Direction _direction;
         public float SecondsBeforeKick;
     }
 

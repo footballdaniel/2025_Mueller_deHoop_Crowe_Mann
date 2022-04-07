@@ -14,7 +14,8 @@ namespace VUPenalty
 
             _context.TrialGameObject = new GameObject("Trial Root Object");
 
-            var _goalkeeperGO = Object.Instantiate(_context.GoalkeeperPrefab, _context.TrialGameObject.transform);
+            var _goalkeeperGO = Object.Instantiate(_context.GoalkeeperPrefab,_context.TrialGameObject.transform);
+            _goalkeeperGO.transform.position = new Vector3(_context.ActiveTrial.GoalKeeperDisplacement, 0, 0);
             _context.Goalkeeper = _goalkeeperGO.GetComponent<Goalkeeper>();
             _context.Goalkeeper._direction = _context.ActiveTrial.JumpDirection;
 

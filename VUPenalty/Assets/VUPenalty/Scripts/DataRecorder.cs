@@ -6,6 +6,11 @@ namespace VUPenalty
 {
     public class DataRecorder : MonoBehaviour
     {
+        public KickEndEvent KickEnd;
+        public KickStartEvent KickStart;
+        public float BufferWindow = 2f;
+        public Transform Target;
+        public List<Point3D> TimeSeries => _bufferPoints.ToList();
 
         public KeeperDiveData GetDiveData()
         {
@@ -13,14 +18,13 @@ namespace VUPenalty
                 Debug.LogError("Could not export dive data, kick has not occured");
 
             var keeperDivedBeforeBallKickInSeconds = Time.timeSinceLevelLoad - _currentTimeAtDive;
-            return new KeeperDiveData(keeperDivedBeforeBallKickInSeconds, _dive.Direction);
+            return new KeeperDiveData(keeperDivedBeforeBallKickInSeconds);
         }
 
-        public KickEndEvent KickEnd;
-        public KickStartEvent KickStart;
-        public float BufferWindow = 2f;
-        public Transform Target;
-        public List<Point3D> TimeSeries => _bufferPoints.ToList();
+        public void OnKeeperDived(KeeperDiveEvent obj)
+        {
+            _currentTimeAtDive = Time.timeSinceLevelLoad;
+        }
 
         void Awake()
         {
@@ -31,7 +35,7 @@ namespace VUPenalty
         void FixedUpdate()
         {
             var secondsOfStoredPositions = _bufferPoints.Count * Time.fixedDeltaTime;
-            
+
             if (secondsOfStoredPositions > BufferWindow)
             {
                 _bufferPoints.Dequeue();
@@ -45,13 +49,6 @@ namespace VUPenalty
 
         Queue<Point3D> _bufferPoints;
         Queue<float> _bufferTime;
-        KeeperDiveEvent _dive;
         float _currentTimeAtDive;
-
-        public void OnKeeperDived(KeeperDiveEvent obj)
-        {
-            _dive = obj;
-            _currentTimeAtDive = Time.timeSinceLevelLoad;
-        }
     }
 }
