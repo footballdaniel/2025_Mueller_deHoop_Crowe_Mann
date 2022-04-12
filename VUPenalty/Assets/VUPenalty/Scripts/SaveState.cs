@@ -57,6 +57,7 @@ namespace VUPenalty
                 GoalkeeperStartBeforeKick = _context.ActiveTrial.GoalkeeperStartBeforeKick,
                 AdvertisementStartBeforeKick = _context.ActiveTrial.AdvertisementStartBeforeKick,
                 BallElasticity = _context.ExperimentalData.BallElasticity,
+                GoalkeeperDisplacement = _context.ActiveTrial.GoalKeeperDisplacement,
                 JumpDirection = Enum.GetName(typeof(Direction), _context.ActiveTrial.JumpDirection),
                 AdvertisementDirection = Enum.GetName(typeof(Direction), _context.ActiveTrial.AdvertisementDirection),
                 Events = new EventData(_context.DataRecorder.KickEnd, _context.DataRecorder.KickStart, _context.DataRecorder.GetDiveData()),

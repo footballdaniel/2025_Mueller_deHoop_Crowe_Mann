@@ -52,6 +52,7 @@ namespace VUPenalty
         public string AdvertisementDirection;
         public EventData Events;
         public TrackingData Tracking;
+        public float GoalkeeperDisplacement;
     }
 
     [Serializable]
@@ -99,13 +100,13 @@ namespace VUPenalty
             SecondsBeforeKick = secondsBeforeKick;
         }
         
-        public float SecondsBeforeKick;
+        [NonSerialized] public float SecondsBeforeKick; // Dont save to file
     }
 
     [Serializable]
     public class KickEndEvent
     {
         public Point3D EndLocation;
-        public bool Success;
+        [NonSerialized] public bool Success; // Dont save to file
     }
 }
