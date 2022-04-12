@@ -52,6 +52,7 @@ namespace VUPenalty
         public string AdvertisementDirection;
         public EventData Events;
         public TrackingData Tracking;
+        public float GoalkeeperDisplacement;
     }
 
     [Serializable]
