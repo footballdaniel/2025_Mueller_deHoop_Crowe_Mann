@@ -64,6 +64,8 @@ namespace VUPenalty
                 Tracking = new TrackingData(_context.DataRecorder.TimeSeries)
                 
             };
+            
+            var json = JsonUtility.ToJson(trial, true);
             return trial;
         }
     }

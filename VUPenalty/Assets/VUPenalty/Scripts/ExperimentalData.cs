@@ -46,13 +46,13 @@ namespace VUPenalty
         public float VideoHeight;
         public float VideoWidth;
         public float GoalkeeperStartBeforeKick;
+        public float GoalkeeperDisplacement;
         public float AdvertisementStartBeforeKick;
         public float BallElasticity;
         public string JumpDirection;
         public string AdvertisementDirection;
         public EventData Events;
         public TrackingData Tracking;
-        public float GoalkeeperDisplacement;
     }
 
     [Serializable]
