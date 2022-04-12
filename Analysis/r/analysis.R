@@ -38,11 +38,24 @@ read_all_json <- function(filenames)
   }
   
   df$end_x <- as.numeric(as.character(df$end_x))
+  df$end_y <- as.numeric(as.character(df$end_y))
+  
   return(df)
 }
 
 # debug(read_all_json)
 df <- read_all_json(fileNames)
+
+# Setup variables
+df$advertisement <- factor(df$advertisement)
+
+# Stats ------------------------------------------------------------------
+df_ttest <- df[df$advertisement == "Left" | df$advertisement == "Right",]
+t.test(end_x ~ advertisement, data = df_ttest)
+
+# Anova
+results_anov <- aov(end_x ~ advertisement, data = df_ttest)
+summary(results_anov)
 
 # Visualizations ----------------------------------------------------------
 hist(df$end_x, breaks = 20)
