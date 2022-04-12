@@ -2403,28 +2403,28 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -2438,7 +2438,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
@@ -2454,328 +2454,6 @@ MonoBehaviour:
     GoalKeeperDisplacement: 0
     JumpDirection: 1
     AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
@@ -2787,44 +2465,30 @@ MonoBehaviour:
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+  - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
@@ -2833,96 +2497,12 @@ MonoBehaviour:
     JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
     GoalkeeperStartBeforeKick: 0
@@ -2935,154 +2515,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 1
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 1
+    JumpDirection: 0
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
@@ -3092,355 +2525,19 @@ MonoBehaviour:
     JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 1
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.11
     JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0
     JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 0
     AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 0}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0.11
-    JumpDirection: 0
-    AdvertisementDirection: 2
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
-    AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
@@ -3456,6 +2553,202 @@ MonoBehaviour:
     JumpDirection: 0
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
@@ -3463,11 +2756,88 @@ MonoBehaviour:
     JumpDirection: 0
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
     JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -3477,32 +2847,25 @@ MonoBehaviour:
     JumpDirection: 0
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
-    AdvertisementDirection: 1
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: 0
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
-    GoalkeeperStartBeforeKick: 0
-    AdvertisementStartBeforeKick: 10
-    GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
-    AdvertisementDirection: 0
-    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
-  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
     JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
@@ -3516,6 +2879,272 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
     JumpDirection: 0
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
@@ -3523,7 +3152,378 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
     JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.22
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.05
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 0}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
+    AdvertisementDirection: 2
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.22
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 0
+    AdvertisementDirection: 1
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.05
+    JumpDirection: 1
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: 0.11
+    JumpDirection: 0
+    AdvertisementDirection: 0
+    GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
+  - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
+    GoalkeeperStartBeforeKick: 0
+    AdvertisementStartBeforeKick: 10
+    GoalKeeperDisplacement: -0.11
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
@@ -3537,7 +3537,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
@@ -3551,7 +3551,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -3565,21 +3565,21 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -3593,7 +3593,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -3628,14 +3628,14 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -3670,7 +3670,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
@@ -3684,7 +3684,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.22
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
@@ -3698,14 +3698,14 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.11
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
@@ -3719,7 +3719,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
@@ -3733,14 +3733,14 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 0
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.22
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: e2a5444db6052f247b69893afb09d26f, type: 3}
@@ -3768,14 +3768,14 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -3789,7 +3789,7 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: 0.22
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 0}
@@ -3803,14 +3803,14 @@ MonoBehaviour:
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 2
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
   - Video: {fileID: 32900000, guid: 3f6a3ff61ecbd44439e2487428c190ca, type: 3}
     GoalkeeperStartBeforeKick: 0
     AdvertisementStartBeforeKick: 10
     GoalKeeperDisplacement: -0.05
-    JumpDirection: 0
+    JumpDirection: 1
     AdvertisementDirection: 1
     GoalKeeperColor: {fileID: 2800000, guid: 808056de42d36ab4fa8f2d36d4a04235, type: 3}
 --- !u!114 &1471312637
