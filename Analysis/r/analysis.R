@@ -38,12 +38,13 @@ read_all_json <- function(filenames)
     end_x = round(data$Events$End$EndLocation$X, 2)
     end_y = round(data$Events$End$EndLocation$Y, 2)
     goalkeeper_position = round(data$GoalkeeperDisplacement, 2)
-    new_observations = cbind(participant_name, advertisement, end_x, end_y)
+    new_observations = cbind(participant_name, advertisement, goalkeeper_position, end_x, end_y)
     df <- rbind(df, new_observations)
   }
   
   df$end_x <- as.numeric(as.character(df$end_x))
   df$end_y <- as.numeric(as.character(df$end_y))
+  df$goalkeeper_position <- as.numeric(as.character(df$goalkeeper_position))
   
   return(df)
 }
@@ -56,7 +57,6 @@ df$advertisement <- factor(df$advertisement)
 
 # Visualizations ----------------------------------------------------------
 hist(df$end_x, breaks = 20)
-hist(df$end_x[df$participant_name=="David Mann"], breaks=20)
 
 plot(
   df$end_x, df$end_y, 
@@ -80,7 +80,7 @@ t.test(end_x ~ advertisement, data = df_ttest)
 results_anov <- aov(end_x ~ advertisement + goalkeeper_position + advertisement:goalkeeper_position, data = df_ttest)
 summary(results_anov)
 
-# Standardized data
+# Standardized data and regression
 df_z <- df_ttest
 df_z$end_x <- (df$end_x - mean(df$end_x)) / sd(df$end_x)
 df_z$end_y <- (df$end_y - mean(df$end_y)) / sd(df$end_y)
