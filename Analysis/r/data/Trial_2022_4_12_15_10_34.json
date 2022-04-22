@@ -26,7 +26,7 @@
         },
         "End": {
             "EndLocation": {
-                "X": -1.3,
+                "X": 0.0,
                 "Y": 0.0,
                 "Z": 0.0
             }
@@ -942,5 +942,5 @@
             }
         ]
     },
-    "GoalkeeperDisplacement": 0.01000000074505806
+    "GoalkeeperDisplacement": 0.05000000074505806
 }
