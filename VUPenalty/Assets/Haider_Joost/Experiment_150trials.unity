@@ -2747,7 +2747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcac2fe3a4454702bca34efb008dc46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParticipantName: Experiment
+  ParticipantName: Yusuf
   ResearchInstitution: VU
   VideoHeight: 5
   VideoWidth: 12
