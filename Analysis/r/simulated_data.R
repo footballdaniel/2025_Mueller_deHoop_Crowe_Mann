@@ -60,7 +60,8 @@ ggplot(df, aes(x = x)) +
   geom_segment(x = -3.65, y = 0, xend = -3.65, yend = 2.7, color = "red", size = 1) +
   geom_segment(x = 3.65, y = 0, xend = 3.65, yend = 2.7, color = "red", size = 1) +
   geom_segment(x = -3.65, y = 2.7, xend = 3.65, yend = 2.7, color = "red", size = 1) 
-  
+
+# Title
 ggplot(df, aes(x = x)) +
   coord_fixed(ratio = 1) +
   geom_histogram() +
@@ -68,18 +69,8 @@ ggplot(df, aes(x = x)) +
   geom_segment(x = -3.65, y = 0, xend = -3.65, yend = 2.7, color = "red", size = 1) +
   geom_segment(x = 3.65, y = 0, xend = 3.65, yend = 2.7, color = "red", size = 1) +
   geom_segment(x = -3.65, y = 2.7, xend = 3.65, yend = 2.7, color = "red", size = 1) +
-  # make aspect ratio fixed
-  # change number of facets per rows
-
-
-# Scatterplot left and right shots with color for condititions
-ggplot(df, aes(x = x, y = y, color = ADDIRECTION)) +
-  geom_point() +
-  facet_wrap(~participant) +
-  geom_segment(x = -3.65, y = 0, xend = -3.65, yend = 2.7, color = "red", size = 1) +
-  geom_segment(x = 3.65, y = 0, xend = 3.65, yend = 2.7, color = "red", size = 1) +
-  geom_segment(x = -3.65, y = 2.7, xend = 3.65, yend = 2.7, color = "red", size = 1) +
-  scale_color_manual(values = c("ADLEFT" = "blue", "ADRIGHT" = "red"), labels = c("Ads moving left", "Ads moving right"))
+  ggtitle("Simulated data with bias for Particpant 4 and 5")
+ggsave("plots/simulation_participant_level_bias.png", width = 10, height = 10)
 
 # Scatterplot left and right shots with color for condititions
 ggplot(df, aes(x = x, y = y, color = ADDIRECTION)) +
@@ -89,10 +80,10 @@ ggplot(df, aes(x = x, y = y, color = ADDIRECTION)) +
   geom_segment(x = -3.65, y = 0, xend = -3.65, yend = 2.7, color = "red", size = 1) +
   geom_segment(x = 3.65, y = 0, xend = 3.65, yend = 2.7, color = "red", size = 1) +
   geom_segment(x = -3.65, y = 2.7, xend = 3.65, yend = 2.7, color = "red", size = 1) +
-  scale_color_manual(values = c("ADLEFT" = "blue", "ADRIGHT" = "red"), labels = c("Ads moving left", "Ads moving right"))
-
+  scale_color_manual(values = c("ADLEFT" = "blue", "ADRIGHT" = "red"), labels = c("Ads moving left", "Ads moving right")) +
+  ggtitle("Simulated data influenced by participant 4 and 5")
 # Save figure
-ggsave("simulated_data.png", width = 10, height = 10)
+ggsave("plots/simulation_participant_level.png", width = 10, height = 10)
 
 
 library(lme4)
