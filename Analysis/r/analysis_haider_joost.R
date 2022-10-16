@@ -5,14 +5,14 @@
 # Use Ctrl + Enter to execute the code line by line
 
 # Load workspace ----------------------------------------------------------
+library(sjPlot)
 library(rjson)
 library(rstudioapi)
-library(sjPlot)
 library(dplyr)
 library(ggplot2)
-library(glmmTMB)
 library(lme4)
 library(ggridges)
+library(glmmTMB)
 
 # Clear environment variables
 rm(list = ls())
@@ -26,7 +26,6 @@ getwd()
 set_theme(
   base = theme_bw(),
   axis.linecolor = "black", # Black axis lines
-  legend.background = element_rect(fill = "white", colour = "black")
 )
 
 # Reference to functions ---------------------------------------------------
@@ -61,7 +60,7 @@ m1.2 <- glm(
 tab_model(m1.2)
 plot_model(m1.2, show.values = TRUE, vline.color = "black")
 plot_model(
-  m1.2, 
+  m1.2,
   type = "pred",
   title = "Study 1: Big advertisements, no GK movement \n
   Fixed effect model shows a significant add effect")
@@ -107,9 +106,21 @@ plot_model(
   vline.color = "black",
   axis.labels = c("Advertisement direction"),
   title = "Study 1: Big advertisements, no GK movement",
-  m.labels = c("Fixed effect model", "Varying intercept model")
+  m.labels = c("Fixed effect model", "Varying intercept model"),
+  colors = "bw"
+)
+
+# Comparing fixed level vs multilevel approach
+plot_models(
+  m1.2,
+  m2.2,
+  show.values = TRUE,
+  m.labels = c("Fixed effect model", "Varying intercept model"),
+  vline.color = "black",
+  title = "Study 2: Small advertisements"
 )
 ggsave("plots/haider_joost_direction_forestplot.jpg", width = 7, height = 3, dpi = 300)
+
 
 ## Plot biases
 lme4::ranef(m2.2)

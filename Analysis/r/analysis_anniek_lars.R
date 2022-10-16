@@ -5,14 +5,14 @@
 # Use Ctrl + Enter to execute the code line by line
 
 # Load workspace ----------------------------------------------------------
+library(sjPlot)
 library(rjson)
 library(rstudioapi)
-library(sjPlot)
 library(dplyr)
 library(ggplot2)
-library(glmmTMB)
 library(lme4)
 library(ggridges)
+library(glmmTMB)
 
 # Clear environment variables
 rm(list = ls())
@@ -26,7 +26,6 @@ getwd()
 set_theme(
   base = theme_bw(),
   axis.linecolor = "black", # Black axis lines
-  legend.background = element_rect(fill = "white", colour = "black")
 )
 
 # Reference to functions ---------------------------------------------------
@@ -36,12 +35,6 @@ source("src/clean_data.R")
 # Load data ---------------------------------------------------------------
 df_raw <- read_all_json("../data/LarsAnniek/")
 df <- clean_data(df_raw)
-
-df$goalkeeper_position.f <- factor(
-  df$goalkeeper_position,
-  levels = c(-0.22, -0.11, -0.05, 0, 0.05, 0.11, 0.22),
-  labels = c("22 cm Left", "11 cm Left", "5 cm Left", "Center", "5 cm Right", "11 cm Right", "22 cm Right")
-)
 
 # Descriptive summary -----------------------------------------------------
 names(df)
@@ -66,7 +59,6 @@ ggplot(df, aes(x = goalkeeper_position.f, fill = direction)) +
   labs(title = "Study 2: Small advertisements")
 ggsave("plots/anniek_lars_direction_goalkeeper.jpg", width = 10, height = 4, dpi = 300)
 
-
  # plot of end_x based on each level of goalkeeper
 ggplot(df, aes(x = end_x, y = goalkeeper_position.f)) +
   geom_density_ridges() +
@@ -75,7 +67,8 @@ ggplot(df, aes(x = end_x, y = goalkeeper_position.f)) +
   geom_vline(aes(xintercept = -3.6), df) +
   geom_vline(aes(xintercept = 3.6), df) +
   xlim(-6, 6) +
-  ylab("Goalkeeper placement")
+  ylab("Goalkeeper placement") +
+  labs(title = "Study 2: Small advertisements")
 ggsave("plots/anniek_lars_direction_goalkeeper_continuous.jpg", width = 6, height = 4, dpi = 300)
 
 
@@ -88,7 +81,12 @@ m1.1 <- glm(
   data = df
 )
 tab_model(m1.1)
-plot_model(m1.1, show.values = TRUE, vline.color = "black")
+plot_model(
+  m1.1,
+  show.values = TRUE,
+  colors = "bw",
+  vline.color = "black"
+)
 plot_model(m1.1, type = "pred")
 
 # Adds only
@@ -102,9 +100,13 @@ plot_model(
   m1.2,
   show.values = TRUE,
   vline.color = "black",
-  colors = "bw"
+  colors = "bw",
+  axis.labels = c("Advertisement movement")
 )
-plot_model(m1.2, type = "pred")
+plot_model(
+  m1.2,
+  type = "pred"
+)
 
 # Full model with interaction
 # Non-significant interaction effect. when ads go to the right, the effect of gk is bigger.
@@ -158,11 +160,10 @@ m2.3 <- lme4::glmer(
   data = df
 )
 plot_model(
-  m2.3, 
+  m2.3,
   show.values = TRUE, 
   vline.color = "black",
   colors = "bw")
-ggsave("plots/anniek_lars_shot_direction_prediction.png", width = 8, height = 6)
 
 plot_model(m2.3, type = "res", colors = "bw")
 sjPlot::plot_model(
@@ -187,7 +188,6 @@ tab_model(
   file = "plots/anniek_lars_direction_table.doc"
 )
 
-
 # Comparing fixed level vs multilevel approach
 plot_models(
   m1.3,
@@ -195,8 +195,8 @@ plot_models(
   show.values = TRUE,
   axis.labels = c("Interaction effect", "Goalkeeper position", "Ads moving right"),
   m.labels = c("Fixed effect model", "Varying intercept model"),
-  vline.color = "black"
+  vline.color = "black",
+  title = "Study 2: Small advertisements"
 )
 # Save plot
 ggsave("plots/anniek_lars_shot_direction_forestplot.png", width = 8, height = 5)
-
