@@ -1,7 +1,10 @@
-read_all_json <- function(participants_folders) {
+read_all_json <- function(folder_path) {
     # Iterating over all participant folder in a folder.
     # Reading the penalty data from Json
     # Return df with all data
+
+    participants_folders <- list.dirs(folder_path)[-1]
+
     df <- data.frame()
     for (participant in participants_folders) {
         df <- ingest_json_files(participant, df)

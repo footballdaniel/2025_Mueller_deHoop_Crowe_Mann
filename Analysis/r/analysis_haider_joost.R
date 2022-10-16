@@ -4,12 +4,6 @@
 # In the same folder, there has to be a folder called "data" that contains all json files from the experiment
 # Use Ctrl + Enter to execute the code line by line
 
-# Required packages -------------------------------------------------------
-# These two lines need to be run only once!
-# install.packages("rjson")
-# install.packages("rstudioapi")
-# install.packages("dplyr")
-
 # Load workspace ----------------------------------------------------------
 library(rjson)
 library(rstudioapi)
@@ -30,7 +24,7 @@ getwd()
 
 # Set theme for plotting
 set_theme(
-  base = theme_blank(),
+  base = theme_bw(),
   axis.linecolor = "black", # Black axis lines
   legend.background = element_rect(fill = "white", colour = "black")
 )
@@ -40,8 +34,7 @@ source("src/read_data.R")
 source("src/clean_data.R")
 
 # Load data ---------------------------------------------------------------
-folders_haider_joost <- list.dirs("../data/HaiderJoost/")[-1]
-df_raw <- read_all_json(folders_haider_joost)
+df_raw <- read_all_json("../data/HaiderJoost/")
 df <- clean_data(df_raw)
 
 # Descriptive summary -----------------------------------------------------
@@ -134,6 +127,7 @@ plot_model(
 plot_model(
   m2.2,
   type = "re",
+  colors = "bw",
   title = "Shot bias per participant",
   transform = NULL) +
   xlab("Participants") +

@@ -4,110 +4,84 @@
 # In the same folder, there has to be a folder called "data" that contains all json files from the experiment
 # Use Ctrl + Enter to execute the code line by line
 
-# Required packages -------------------------------------------------------
-# These two lines need to be run only once!
-# install.packages("rjson")
-# install.packages("rstudioapi")
-# install.packages("dplyr")
-
-
 # Load workspace ----------------------------------------------------------
 library(rjson)
 library(rstudioapi)
 library(sjPlot)
 library(dplyr)
+library(ggplot2)
+library(glmmTMB)
+library(lme4)
+library(ggridges)
 
 # Clear environment variables
 rm(list = ls())
 # Clear console commands
 cat("\014")
-
 # Set working directory to current script location
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 getwd()
 
-# Load data ---------------------------------------------------------------
-folders_lars_anniek <- list.dirs("../data/LarsAnniek/")[-1]
-folders_haider_joost <- list.dirs("../data/HaiderJoost/")[-1]
-
-read_all_json <- function(participants_folders) {
-  df <- data.frame()
-  for (participant in participants_folders)
-  {
-    participant_name <- basename(participant)
-    search_pattern <- paste(participant, "/*.json", sep = "")
-    print(search_pattern)
-    file_names <- Sys.glob(search_pattern)
-    print(file_names)
-    file_numbers <- seq(file_names)
-
-    for (file_number in file_numbers)
-    {
-      data <- rjson::fromJSON(file = file_names[file_number])
-      participant_name <- participant_name
-      advertisement <- data$AdvertisementDirection
-      end_x <- round(data$Events$End$EndLocation$X, 2)
-      end_y <- round(data$Events$End$EndLocation$Y, 2)
-      goalkeeper_position <- round(data$GoalkeeperDisplacement, 2)
-      new_observations <- cbind(participant_name, advertisement, goalkeeper_position, end_x, end_y)
-      df <- rbind(df, new_observations)
-    }
-
-    df$end_x <- as.numeric(as.character(df$end_x))
-    df$end_y <- as.numeric(as.character(df$end_y))
-    df$goalkeeper_position <- as.numeric(as.character(df$goalkeeper_position))
-  }
-  return(df)
-}
-
-df_raw <- read_all_json(folders_lars_anniek)
-df_raw_haider_joost <- read_all_json(folders_haider_joost)
-
-print("CHOOOSE DATASET HERE!")
-cat("WTF, haider and joost do have an ads effect?!")
-df_raw <- df_raw_haider_joost
-
-# Clean up data -----------------------------------------------------------
-df <- subset(df_raw, advertisement != "None")
-df <- df %>% mutate(
-  direction = ifelse(end_x > 0, 1, 0),
-  gk_distance_from_center = abs(goalkeeper_position)
+# Set theme for plotting
+set_theme(
+  base = theme_bw(),
+  axis.linecolor = "black", # Black axis lines
+  legend.background = element_rect(fill = "white", colour = "black")
 )
 
-# Label the factors (for plotting)
-df$advertisement <- factor(df$advertisement, levels = c("Left", "Right"), labels = c("Advertisement moving left", "Advertisement moving right"))
-df$direction <- factor(df$direction, levels = c(0, 1), labels = c("Left", "Right"))
+# Reference to functions ---------------------------------------------------
+source("src/read_data.R")
+source("src/clean_data.R")
+
+# Load data ---------------------------------------------------------------
+df_raw <- read_all_json("../data/LarsAnniek/")
+df <- clean_data(df_raw)
+
+df$goalkeeper_position.f <- factor(
+  df$goalkeeper_position,
+  levels = c(-0.22, -0.11, -0.05, 0, 0.05, 0.11, 0.22),
+  labels = c("22 cm Left", "11 cm Left", "5 cm Left", "Center", "5 cm Right", "11 cm Right", "22 cm Right")
+)
 
 # Descriptive summary -----------------------------------------------------
 names(df)
 
-# Influence of ads:
-# When the ads go to the right, the mean distribution shifts ever so slightly right.
-# However, SD is huge
-df %>%
-  group_by(advertisement) %>%
-  summarize(
-    n = n(),
-    mean_direction = mean(end_x),
-    sd_direction = sd(end_x)
-  )
+# Barplot for shot direction based on ads
+ggplot(df, aes(x = direction, fill = advertisement)) +
+  geom_bar(position = "dodge") +
+  xlab("Shot direction") +
+  ylab("Number of shots") +
+  scale_fill_manual(values = c("black", "white")) +
+  theme(legend.background = element_rect(fill = "white", color = "black")) +
+  labs(title = "Study 2: Small advertisements")
+ggsave("plots/anniek_lars_direction_ads.jpg", width = 6, height = 4, dpi = 300)
 
-# Compare direction of shots based on goalkeeper position
-# Not really any effect
-df %>%
-  group_by(goalkeeper_position) %>%
-  summarize(
-    n = n(),
-    mean_direction = mean(end_x),
-    sd_direction = sd(end_x)
-  )
+# barplot for each goalkeeper position
+ggplot(df, aes(x = goalkeeper_position.f, fill = direction)) +
+  geom_bar(position = "dodge") +
+  xlab("Goalkeeper placement") +
+  ylab("Number of shots") +
+  scale_fill_manual(values = c("black", "white")) +
+  theme(legend.background = element_rect(fill = "white", color = "black")) +
+  labs(title = "Study 2: Small advertisements")
+ggsave("plots/anniek_lars_direction_goalkeeper.jpg", width = 10, height = 4, dpi = 300)
+
+
+ # plot of end_x based on each level of goalkeeper
+ggplot(df, aes(x = end_x, y = goalkeeper_position.f)) +
+  geom_density_ridges() +
+  xlab("Shot distribution [m]") +
+  geom_text(aes(label = "Center of goal"), x = 0, y = 0.6, size = 3) +
+  geom_vline(aes(xintercept = -3.6), df) +
+  geom_vline(aes(xintercept = 3.6), df) +
+  xlim(-6, 6) +
+  ylab("Goalkeeper placement")
+ggsave("plots/anniek_lars_direction_goalkeeper_continuous.jpg", width = 6, height = 4, dpi = 300)
 
 
 # SHOT DIRECTION ----------------------------------------------------------- 
 # Run fixed effects model --------------------------------------------------
-# Model 1: Direction of shot based on goalkeeper position
-# When gk position alone, a small significant effect
-# When gk is on the right, people shoot more to the left. However, people generally shoot to the right.
+# Gk only
 m1.1 <- glm(
   direction ~ goalkeeper_position,
   family = binomial(link = "logit"),
@@ -117,17 +91,22 @@ tab_model(m1.1)
 plot_model(m1.1, show.values = TRUE, vline.color = "black")
 plot_model(m1.1, type = "pred")
 
-# No effect
+# Adds only
 m1.2 <- glm(
   direction ~ advertisement,
   data = df,
   family = binomial(link = "logit")
 )
 tab_model(m1.2)
-plot_model(m1.2, show.values = TRUE, vline.color = "black")
+plot_model(
+  m1.2,
+  show.values = TRUE,
+  vline.color = "black",
+  colors = "bw"
+)
 plot_model(m1.2, type = "pred")
 
-# Ads and goalkeeper
+# Full model with interaction
 # Non-significant interaction effect. when ads go to the right, the effect of gk is bigger.
 m1.3 <- glm(
   direction ~ advertisement + goalkeeper_position + goalkeeper_position:advertisement,
@@ -136,9 +115,13 @@ m1.3 <- glm(
 )
 
 tab_model(m1.3)
-plot_model(m1.3, show.values = TRUE, vline.color = "black")
+plot_model(
+  m1.3,
+  show.values = TRUE,
+  vline.color = "black",
+  colors = "bw")
 plot_model(m1.3, type = "pred", show.values = TRUE, terms = c("goalkeeper_position", "advertisement"), )
-plot_model(m1.3, type = "res")
+plot_model(m1.3, type = "res", colors = "bw")
 
 # Run multilevel on direction ----------------------------------------------
 # Goalkeeper only. Stronger effect now!
@@ -147,21 +130,12 @@ m2.1 <- lme4::glmer(
   family = binomial,
   data = df
 )
-
-# Tab model with log odds
 tab_model(m2.1)
-plot_model(m2.1, show.values = TRUE, vline.color = "black")
-
-# Compare with 1.1
-# Same effect as fixed model
-plot_models(
-  m1.1,
+plot_model(
   m2.1,
   show.values = TRUE,
-  m.labels = c("Fixed effect model", "Varying intercept model"),
-  axis.labels = c("Goalkeeper position"),
-  vline.color = "black"
-)
+  vline.color = "black",
+  colors = "bw")
 
 # Ads only
 m2.2 <- lme4::glmer(
@@ -170,23 +144,49 @@ m2.2 <- lme4::glmer(
   data = df
 )
 tab_model(m2.2)
-plot_model(m2.2, show.values = TRUE, vline.color = "black")
+plot_model(
+  m2.2,
+  show.values = TRUE,
+  vline.color = "black",
+  colors = "bw"
+)
 
 # Interaction
-m2.3 <- lme4::lmer(
+m2.3 <- lme4::glmer(
   direction ~ advertisement + goalkeeper_position + goalkeeper_position:advertisement + (1 | participant_name),
   family = binomial,
   data = df
 )
-
-
-tab_model(m2.3, transform = NULL, show.se = TRUE, collapse.ci = TRUE, file = "plots/anniek_lars_shot_direction_table.doc")
-plot_model(m2.3, show.values = TRUE, vline.color = "black")
-plot_model(m2.3, type = "pred", show.values = TRUE, terms = c("goalkeeper_position", "advertisement"))
-## Save plot
+plot_model(
+  m2.3, 
+  show.values = TRUE, 
+  vline.color = "black",
+  colors = "bw")
 ggsave("plots/anniek_lars_shot_direction_prediction.png", width = 8, height = 6)
 
-plot_model(m2.3, type = "res")
+plot_model(m2.3, type = "res", colors = "bw")
+sjPlot::plot_model(
+  m2.3,
+  type = "pred",
+  terms = c("goalkeeper_position", "advertisement"))
+
+# Compare effects
+tab_model(
+  m1.3, m2.3,
+  pred.labels = c("Intercept", "Advertisement direction", "Goalkeeper position", "Interaction"),
+  dv.labels = c("Regression", "Multilevel regression"),
+  transform = NULL,
+  show.se = TRUE
+)
+tab_model(
+  m1.3, m2.3,
+  pred.labels = c("Intercept", "Advertisement direction", "Goalkeeper position", "Interaction"),
+  dv.labels = c("Regression", "Multilevel regression"),
+  transform = NULL,
+  show.se = TRUE,
+  file = "plots/anniek_lars_direction_table.doc"
+)
+
 
 # Comparing fixed level vs multilevel approach
 plot_models(
@@ -197,30 +197,6 @@ plot_models(
   m.labels = c("Fixed effect model", "Varying intercept model"),
   vline.color = "black"
 )
-
 # Save plot
 ggsave("plots/anniek_lars_shot_direction_forestplot.png", width = 8, height = 5)
 
-
-
-# SHOT PLACEMENT: ----------------------------------------------------------
-# SUMMARY: No effects found for shot placement.
-
-# Ads only
-m3.2 <- lme4::glmer(
-  end_x ~ advertisement + (1 | participant_name),
-  family = gaussian,
-  data = df
-)
-tab_model(m3.2, transform = NULL, show.se = TRUE, collapse.ci = TRUE)
-
-# Interaction
-m3.3 <- lme4::lmer(
-  end_x ~ advertisement + goalkeeper_position + goalkeeper_position:advertisement + (1 | participant_name),
-  data = df
-)
-tab_model(m3.3, transform = NULL, show.se = TRUE, collapse.ci = TRUE)
-tab_model(m3.3, transform = NULL, show.se = TRUE, collapse.ci = TRUE, file = "plots/anniek_lars_shot_placement_table.doc")
-plot_model(m3.3, show.values = TRUE, vline.color = "black")
-plot_model(m3.3, type = "pred", show.values = TRUE, terms = c("goalkeeper_position", "advertisement"))
-plot_model(m3.3, type = "res")
