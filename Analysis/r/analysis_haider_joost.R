@@ -15,6 +15,10 @@ library(rjson)
 library(rstudioapi)
 library(sjPlot)
 library(dplyr)
+library(ggplot2)
+library(glmmTMB)
+library(lme4)
+library(ggridges)
 
 # Clear environment variables
 rm(list = ls())
@@ -24,6 +28,13 @@ cat("\014")
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 getwd()
 
+# Set theme for plotting
+set_theme(
+  base = theme_blank(),
+  axis.linecolor = "black", # Black axis lines
+  legend.background = element_rect(fill = "white", colour = "black")
+)
+
 # Reference to functions ---------------------------------------------------
 source("src/read_data.R")
 source("src/clean_data.R")
@@ -31,34 +42,23 @@ source("src/clean_data.R")
 # Load data ---------------------------------------------------------------
 folders_haider_joost <- list.dirs("../data/HaiderJoost/")[-1]
 df_raw <- read_all_json(folders_haider_joost)
-
-# Clean up data -----------------------------------------------------------
 df <- clean_data(df_raw)
 
 # Descriptive summary -----------------------------------------------------
 names(df)
 
-# Influence of ads:
-df %>%
-  group_by(advertisement) %>%
-  summarize(
-    n = n(),
-    mean_direction = mean(end_x),
-    sd_direction = sd(end_x)
-  )
-
-# Compare direction of shots based on goalkeeper position
-# Not really any effect
-df %>%
-  group_by(goalkeeper_position) %>%
-  summarize(
-    n = n(),
-    mean_direction = mean(end_x),
-    sd_direction = sd(end_x)
-  )
+# Barplot for shot direction based on ads
+ggplot(df, aes(x = direction, fill = advertisement)) +
+  geom_bar(position = "dodge") +
+  xlab("Shot direction") +
+  ylab("Number of shots") +
+  scale_fill_manual(values = c("black", "white")) +
+  theme(legend.background = element_rect(fill = "white", color = "black")) +
+  labs(title = "Study 1: Big advertisements, no GK movement")
+ggsave("plots/haider_joost_direction_barplot.jpg", width = 6, height = 4, dpi = 300)
 
 
-# SHOT DIRECTION ----------------------------------------------------------- 
+# Ads influencing shot direction (regression) --------------------------------
 # Run fixed effects model
 m1.2 <- glm(
   direction ~ advertisement,
@@ -67,62 +67,85 @@ m1.2 <- glm(
 )
 tab_model(m1.2)
 plot_model(m1.2, show.values = TRUE, vline.color = "black")
-plot_model(m1.2, type = "pred")
+plot_model(
+  m1.2, 
+  type = "pred",
+  title = "Study 1: Big advertisements, no GK movement \n
+  Fixed effect model shows a significant add effect")
 
-# Run multilevel on direction ----------------------------------------------
+
+# Ads influencing shot direction (multilevel regression) --------------------
 m2.2 <- lme4::glmer(
   direction ~ advertisement + (1 | participant_name),
   family = binomial,
   data = df
 )
+
 tab_model(m2.2)
-plot_model(m2.2, show.values = TRUE, vline.color = "black")
+plot_model(
+  m2.2,
+  show.values = TRUE,
+  vline.color = "black",
+  title = "Study 1: Big advertisements, no GK movement"
+)
+
+# Compare effects
+tab_model(
+  m1.2, m2.2,
+  pred.labels = c("Intercept", "Advertisement direction"),
+  dv.labels = c("Regression", "Multilevel regression"),
+  transform = NULL,
+  show.se = TRUE
+)
+
+# Save
+tab_model(
+  m1.2, m2.2,
+  pred.labels = c("Intercept", "Advertisement direction"),
+  dv.labels = c("Regression", "Multilevel regression"),
+  transform = NULL,
+  show.se = TRUE,
+  file = "plots/haider_joost_direction_table.doc"
+)
+
+plot_model(
+  m1.2,
+  show.values = TRUE,
+  vline.color = "black",
+  axis.labels = c("Advertisement direction"),
+  title = "Study 1: Big advertisements, no GK movement",
+  m.labels = c("Fixed effect model", "Varying intercept model")
+)
+ggsave("plots/haider_joost_direction_forestplot.jpg", width = 7, height = 3, dpi = 300)
+
+## Plot biases
+lme4::ranef(m2.2)
+print(as.data.frame(ranef(m2.2)))
+dotplot.ranef.mer(ranef(m2.2))
+
+# Forest plot for random effects
+plot_model(
+  m2.2,
+  type = "re",
+  transform = NULL,
+)
+
+# Modeled bias per participant
+plot_model(
+  m2.2,
+  type = "re",
+  title = "Shot bias per participant",
+  transform = NULL) +
+  xlab("Participants") +
+  ylab("Bias (Odds ratios)")
+ggsave("plots/haider_joost_direction_random_intercepts.jpg", width = 6, height = 8, dpi = 300)
 
 
-# Per participant varying intercepts noise
-
-
-# tab_model(m2.3, transform = NULL, show.se = TRUE, collapse.ci = TRUE, file = "plots/anniek_lars_shot_direction_table.doc")
-# plot_model(m2.3, show.values = TRUE, vline.color = "black")
-# plot_model(m2.3, type = "pred", show.values = TRUE, terms = c("goalkeeper_position", "advertisement"))
-# ## Save plot
-# ggsave("plots/anniek_lars_shot_direction_prediction.png", width = 8, height = 6)
-
-# plot_model(m2.3, type = "res")
-
-# # Comparing fixed level vs multilevel approach
-# plot_models(
-#   m1.3,
-#   m2.3,
-#   show.values = TRUE,
-#   axis.labels = c("Interaction effect", "Goalkeeper position", "Ads moving right"),
-#   m.labels = c("Fixed effect model", "Varying intercept model"),
-#   vline.color = "black"
-# )
-
-# # Save plot
-# ggsave("plots/anniek_lars_shot_direction_forestplot.png", width = 8, height = 5)
-
-
-
-# SHOT PLACEMENT: ----------------------------------------------------------
-# SUMMARY: No effects found for shot placement.
-
-# # Ads only
-# m3.2 <- lme4::glmer(
-#   end_x ~ advertisement + (1 | participant_name),
-#   family = gaussian,
-#   data = df
-# )
-# tab_model(m3.2, transform = NULL, show.se = TRUE, collapse.ci = TRUE)
-
-# # Interaction
-# m3.3 <- lme4::lmer(
-#   end_x ~ advertisement + goalkeeper_position + goalkeeper_position:advertisement + (1 | participant_name),
-#   data = df
-# )
-# tab_model(m3.3, transform = NULL, show.se = TRUE, collapse.ci = TRUE)
-# tab_model(m3.3, transform = NULL, show.se = TRUE, collapse.ci = TRUE, file = "plots/anniek_lars_shot_placement_table.doc")
-# plot_model(m3.3, show.values = TRUE, vline.color = "black")
-# plot_model(m3.3, type = "pred", show.values = TRUE, terms = c("goalkeeper_position", "advertisement"))
-# plot_model(m3.3, type = "res")
+# Distribution per participant
+ggplot(df, aes(x = end_x, y = participant_name)) +
+  geom_density_ridges() +
+  xlim(-4, 4) +
+  xlab("Shot distribution [m]") +
+  ylab("Participants") +
+  labs(title = "Study 1: Shot distribution")
+  ggsave("plots/haider_joost_direction_facet_density.jpg", width = 6, height = 8, dpi = 300)
