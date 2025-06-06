@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vupenalty"
+version = "0.0.1"
+description = "Analysis tools for VU Penalty project."
+authors = [
+    { name = "Daniel Mueller", email = "d.muller@vu.nl" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.0,<4.0",
+    "tabulate>=0.8,<1.0",
+    "python-docx>=1.0,<2.0",
+    "numpy>=1.20,<2.0",
+    "pandas>=1.4,<3.0",
+    "bambi>=0.10,<1.0",
+    "arviz>=0.12,<1.0",
+    "scipy>=1.8,<2.0"
+]

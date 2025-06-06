@@ -1,0 +1,1 @@
+1,48,Direction.LEFT,-7.660656,Condition.ONLYADD

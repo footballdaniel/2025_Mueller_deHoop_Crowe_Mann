@@ -1,0 +1,14 @@
+       Formula: shot_direction['Right'] ~ goalkeeper_movement_initiation * advertisement_direction + (1|participant)
+        Family: bernoulli
+          Link: p = logit
+  Observations: 4500
+        Priors: 
+    target = p
+        Common-level effects
+            Intercept ~ Normal(mu: 0.0, sigma: 2.5)
+            goalkeeper_movement_initiation ~ Uniform(lower: -3.0, upper: 3.0)
+            advertisement_direction ~ Uniform(lower: -3.0, upper: 3.0)
+            goalkeeper_movement_initiation:advertisement_direction ~ Uniform(lower: -3.0, upper: 3.0)
+        
+        Group-level effects
+            1|participant ~ Normal(mu: 0.0, sigma: HalfNormal(sigma: 2.5))

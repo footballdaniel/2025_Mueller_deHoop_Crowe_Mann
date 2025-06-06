@@ -1,0 +1,6 @@
+Use a domain driven approach to my code.
+don't use lose dictionaries or tuples, prefer to use classes instead.
+use records for value types
+never use comments. Write only code, no annotations. If annotations are needed, use functions with good names to create intent driven code.
+Dont use null checks, i am using defensive coding.
+Dont create functions  that I dont ask for.

@@ -1,0 +1,16 @@
+       Formula: goalkeeper_position ~ advertisement_direction + advertisement_direction:condition + (1|participant)
+        Family: gaussian
+          Link: mu = identity
+  Observations: 2580
+        Priors: 
+    target = mu
+        Common-level effects
+            Intercept ~ Normal(mu: 0.0, sigma: 2.5)
+            advertisement_direction ~ Uniform(lower: -3.0, upper: 3.0)
+            advertisement_direction:condition ~ Uniform(lower: -3.0, upper: 3.0)
+        
+        Group-level effects
+            1|participant ~ Normal(mu: 0.0, sigma: HalfNormal(sigma: 0.4534))
+        
+        Auxiliary parameters
+            sigma ~ HalfNormal(sigma: 2.5)

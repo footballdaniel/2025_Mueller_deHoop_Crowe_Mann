@@ -1,0 +1,54 @@
+{
+    "name": "ControllerInput",
+    "maps": [
+        {
+            "name": "RightHandController",
+            "id": "8f868f5b-c8a0-49e8-a4ac-93814749c530",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "1ce217f8-fa16-4d99-999e-084cf428b05f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Touch Pad",
+                    "type": "Value",
+                    "id": "0793f0c6-bed7-47f9-8ac3-4457f6257a54",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "757d07ab-7380-40c2-9eb1-7c9cdaf6c233",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ba8c3ce-95df-45ea-b9a6-78aa1a9fee6d",
+                    "path": "<XRController>{RightHand}/touchpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch Pad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
