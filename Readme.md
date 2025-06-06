@@ -1,5 +1,6 @@
 # The influence of moving visual contextual information on decision-making
 
+[![DOI](https://zenodo.org/badge/429504639.svg)](https://doi.org/10.5281/zenodo.15611610)
 Mueller, de Hoop, Crowe, Mann
 
 ![](VUPenaltyTaker.Unity/Assets/_VUPenalty/Figure_Scientific_Paper/Picture1.jpg)
